@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+# Create your views here.
 def PCOD(request):
     return render(request, 'PCOD.html')
 
