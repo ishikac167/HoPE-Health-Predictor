@@ -1,10 +1,9 @@
-from HealthPredictor.views import PCOD, result_PCOD
 from django.contrib import admin
 from django.urls import path
 
-import views
+# import views
 
-urlpatterns = [
-    path('PCOD', PCOD, name='PCOD'),
-    path('result_PCOD/', result_PCOD, name='result_PCOD')
-]
+# urlpatterns = [
+#     path('PCOD', views.PCOD, name='PCOD'),
+#     path('result_PCOD/', views.result_PCOD, name='result_PCOD')
+# ]
