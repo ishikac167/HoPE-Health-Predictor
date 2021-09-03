@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>PCOD Prediction</title>
+
+  <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- <style>
+    .center {
+      position: relative;
+      text-align: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(230, 239, 245);
+    }
+  </style> -->
+</head>
+
+
+<body class="center">
+
+  <h1 style="color:rgb(44, 44, 90); font-weight: 700;">
+    <i class="fas fa-ship"></i> placeholder Predictor
+  </h1>
+
+  <!-- <p style="color:rgb(51, 51, 83); font-weight: 700;">
+    Can a passenger with your given characteristics survive?
+  </p> -->
+  <form action="result_PCOD">
+    {% csrf_token %}
+    
+  <div class="form-group">
+    <input class="form-control" placeholder="Do You get menstural periods at regular intervals?" required type="text" name="Q1">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="Are you gaining weight Rapidly?" required type="text" name="Q2">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="Do You have excess of facial or body hair?" required type="text" name="Q3">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="Do you Have patches of dark areas on your skin?" required type="text" name="Q4">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="Do You suffer from pimples?" type="text" required name="Q5">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="Do you face deppression and anxiety?" required type="text" name="Q6">
+  </div>
+
+  <div class="form-group">
+    <input class="form-control" placeholder="Do you any family history of Diabetics and Hyper Tension?" required type="text" name="Q7">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="Are you finding any difficulty in maintaining your body weight?" required type="text" name="Q8">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="Do you have an oily skin?" required type="text" name="Q9">
+  </div>
+
+  
+  <div class="form-group">
+    <input class="form-control" placeholder="Are you losing lot of hair or has it became thinner in its strength?" required type="text" name="Q10">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="Where do you Frequently eat?" required type="text" name="Q11">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="Do you exercise reguarly?" required type="text" name="Q12">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="What time do you sleep?" required type="text" name="Q13">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="What time do you wake up?" required type="text" name="Q14">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="Are you mentally stressed if it is your first time a hostel?" required type="text" name="Q15">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="Are you mentally stressed due to personal problems?" required type="text" name="Q16">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="Are you mentally stressed due to peer presure?" required type="text" name="Q17">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="Are you mentally stressed due to change in dietry habits?" required type="text" name="Q18">
+  </div>
+
+
+  <div class="form-group">
+    <input class="form-control" placeholder="How often do you eat fast foods?" required type="text" name="Q19">
+  </div>
+
+
+  <input class="btn btn-primary btn-lg btn-block" type="submit" value='Predict'>
+
+</form>
+</body>
+
+</html>
