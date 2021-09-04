@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 import pickle
 
-
 # Create your views here.
+
 class homepage(TemplateView):
 	template_name = 'index.html'
 

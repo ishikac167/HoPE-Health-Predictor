@@ -60,7 +60,7 @@
   <header id="header">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">HoPE</a></h1>
+      <h1 class="logo me-auto"><a href="{% url 'home' %}">HoPE</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
 
@@ -74,7 +74,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+      <a href="#" class="appointment-btn scrollto"><span class="d-none d-md-inline">Login /</span> Signup</a>
 
     </div>
   </header><!-- End Header -->
@@ -87,9 +87,9 @@
       <a href="#about" class="btn-get-started scrollto">Get Started</a>
     </div>
   </section>  
-  <!-- End Hero
+  <!-- End Hero -->
 
-  <main id="main">
+  <!-- <main id="main"> -->
 
     <!-- ======= Why Us Section ======= -->
     <!-- <section id="why-us" class="why-us">
@@ -134,7 +134,8 @@
                 </div>
               </div> 
             </div>-->
-            <!-- End .content-->
+            <!-- End .content -->
+            
           <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
       <div class="container" data-aos="fade-up">
@@ -268,7 +269,8 @@
 
         <div class="section-title">
           <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>We aim to extract the information about preliminary symptoms and adapt an algorithm using machine learning techniques to predict certain diseases. If a disease can be predicted, then early treatment can be given to the patients which can save the life of patients. We also intend to provide doctor and nutrition recommendation to the patients for swifter treatment.
+          </p>
         </div>
 
         <div class="row">
@@ -284,15 +286,15 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-pills"></i></div>
               <h4><a href="">PCOD</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <p>Polycystic Ovarian Syndrome is a hormonal disorder which is largely prevalent among women of reproductive age. The user will have to answer questions primarily based on their lifestyle and food intake habits.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-hospital-user"></i></div>
-              <h4><a href="">Doctor Appointments</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h4><a href="">Doctor Recommendations</a></h4>
+              <p>According to the predictions generated, the users would be provided with a recommendation of doctors based on their location</p>
             </div>
           </div>
 
@@ -316,7 +318,7 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-notes-medical"></i></div>
               <h4><a href="">Medical Blog</a></h4>
-              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+              <p>Users will be able to access health and nutrition blogs based on their medical history</p>
             </div>
           </div>
 
