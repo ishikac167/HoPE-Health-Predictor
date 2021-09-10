@@ -6,6 +6,9 @@ import pickle
 # def Signup(request):
 #     return render(request, 'signup.html')
 
+# def Login(request):
+#     return render(request, 'login.html')
+
 class homepage(TemplateView):
 	template_name = 'index.html'
 

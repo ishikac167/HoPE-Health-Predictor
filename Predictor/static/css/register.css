@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("../img/hero-bg.png");
   }
   
   .container { 
