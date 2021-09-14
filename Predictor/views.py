@@ -30,27 +30,33 @@ def getPredictions(Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, 
         return 'error'
 
 def result_PCOD(request):
-    Q1 = float(request.GET['Q1'])
-    Q2 = float(request.GET['Q2'])
-    Q3 = float(request.GET['Q3'])
-    Q4 = float(request.GET['Q4'])
-    Q5 = float(request.GET['Q5'])
-    Q6 = float(request.GET['Q6'])
-    Q7 = float(request.GET['Q7'])
-    Q8 = float(request.GET['Q8'])
-    Q9 = float(request.GET['Q9'])
-    Q10 = float(request.GET['Q10'])
-    Q11 = float(request.GET['Q11'])
-    Q12 = float(request.GET['Q12'])
-    Q13 = float(request.GET['Q13'])
-    Q14= float(request.GET['Q14'])
-    Q15 = float(request.GET['Q15'])
-    Q16 = float(request.GET['Q16'])
-    Q17 = float(request.GET['Q17'])
-    Q18 = float(request.GET['Q18'])
-    Q19 = float(request.POST.GET['Q19'])
+    temp = {}
+    temp['Q1'] = request.POST.get('gender')
+    temp['Q2'] = request.POST.get('Q2')
+    temp['Q3'] = request.POST.get('Q3')
+    temp['Q4'] = request.POST.get('Q4')
+    temp['Q5'] = request.POST.get('Q5')
+    temp['Q6'] = request.POST.get('Q6')
+    temp['Q7'] = request.POST.get('Q7')
+    temp['Q8'] = request.POST.get('Q8')
+    temp['Q9'] = request.POST.get('Q9')
+    temp['Q10'] = request.POST.get('Q10')
+    temp['Q11'] = request.POST.get('Q11')
+    temp['Q12'] = request.POST.get('Q12')
+    temp['Q13'] = request.POST.get('Q13')
+    temp['Q14'] = request.POST.get('Q14')
+    temp['Q15'] = request.POST.get('Q15')
+    temp['Q16'] = request.POST.get('Q16')
+    temp['Q17'] = request.POST.get('Q17')
+    temp['Q18'] = request.POST.get('Q18')
+    temp['Q19'] = request.POST.get('Q19')
+    print(temp)
+    input_list = list(temp.values())
+    res = getPredictions(input_list)
+    print(res)
 
-    result_PCOD = getPredictions(Q1, Q2, Q3, Q4,
-                            Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19)
+    context = {
+        'result': res
+    }
 
-    return render(request, 'result_PCOD.html', {'result_PCOD': result_PCOD})
+    return render(request, 'result_PCOD.html', context)
