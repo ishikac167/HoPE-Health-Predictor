@@ -14,8 +14,8 @@ y = data.iloc[:,19:]
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
-from sklearn.naive_bayes import GaussianNB
-NB_classifier = GaussianNB()
-NB_classifier.fit(X_train, y_train)
 
-pickle.dump(NB_classifier, open("PCOD_model.sav", "wb"))
+from catboost import CatBoostClassifier
+CB.fit(X_train, y_train)
+
+pickle.dump(CB, open("PCOD_model.sav", "wb"))

@@ -19,7 +19,7 @@ def PCOD(request):
 
 
 def getPredictions(input_list):
-    model = pickle.load(open('ml_model.sav', 'rb'))
+    model = pickle.load(open('ML Models/PCOD_model.sav', 'rb'))
 
     prediction = model.predict(input_list)
 
