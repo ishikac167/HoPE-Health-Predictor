@@ -9,19 +9,20 @@ import pickle
 # def Login(request):
 #     return render(request, 'login.html')
 
+
 class homepage(TemplateView):
-	template_name = 'index.html'
+    template_name = 'index.html'
+
 
 def PCOD(request):
     return render(request, 'PCOD.html')
 
-def getPredictions(Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19):
+
+def getPredictions(input_list):
     model = pickle.load(open('ml_model.sav', 'rb'))
 
-    prediction = model.predict([
-        [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19]
-    ])
-    
+    prediction = model.predict(input_list)
+
     if prediction == 0:
         return 'no'
     elif prediction == 1:
@@ -29,9 +30,10 @@ def getPredictions(Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, 
     else:
         return 'error'
 
+
 def result_PCOD(request):
     temp = {}
-    temp['Q1'] = request.POST.get('gender')
+    temp['Q1'] = request.POST.get('Q1')
     temp['Q2'] = request.POST.get('Q2')
     temp['Q3'] = request.POST.get('Q3')
     temp['Q4'] = request.POST.get('Q4')
@@ -52,6 +54,7 @@ def result_PCOD(request):
     temp['Q19'] = request.POST.get('Q19')
     print(temp)
     input_list = list(temp.values())
+    print(input_list)
     res = getPredictions(input_list)
     print(res)
 

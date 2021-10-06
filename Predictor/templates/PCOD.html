@@ -33,7 +33,7 @@
   <!-- <p style="color:rgb(51, 51, 83); font-weight: 700;">
     Can a passenger with your given characteristics survive?
   </p> -->
-  <form action="{% url 'result_PCOD' %}" method="GET">
+  <form action="{% url 'result_PCOD' %}" method="POST">
     {% csrf_token %}
     
   <div class="form-group">
