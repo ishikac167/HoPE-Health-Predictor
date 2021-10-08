@@ -17,7 +17,17 @@ class homepage(TemplateView):
 def PCOD(request):
     return render(request, 'PCOD.html')
 
+def getPredictions(input_list):
+    model = pickle.load(open('ML Models/PCOD_model.sav', 'rb'))
 
+    prediction = model.predict(input_list)
+
+    if prediction == 1:
+        return 'yes'
+    elif prediction == 0:
+        return 'no'
+    else:
+        return 'error'
 
 def result_PCOD(request):
     temp = {}
@@ -52,14 +62,3 @@ def result_PCOD(request):
 
     return render(request, 'result_PCOD.html', context)
 
-def getPredictions(input_list):
-    model = pickle.load(open('ML Models/PCOD_model.sav', 'rb'))
-
-    prediction = model.predict(input_list)
-
-    if prediction == 0:
-        return 'no'
-    elif prediction == 1:
-        return 'yes'
-    else:
-        return 'error'
