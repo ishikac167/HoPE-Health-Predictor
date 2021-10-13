@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
   <title>PCOD Prediction</title>
 
   <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
@@ -10,24 +12,33 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <!-- <style>
-    .center {
-      position: relative;
-      text-align: center;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: rgb(230, 239, 245);
-    }
-  </style> -->
+    {% load static %}
+    <!-- Favicons -->
+    <link href="{% static 'img/favicon.png' %}" rel="icon">
+    <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 
 
 <body class="center">
 
   <h1 style="color:rgb(44, 44, 90); font-weight: 700;">
-    <i class="fas fa-ship"></i> placeholder Predictor
+    <i class="fas fa-ship"></i> PCOD Prediction
   </h1>
 
   <!-- <p style="color:rgb(51, 51, 83); font-weight: 700;">
