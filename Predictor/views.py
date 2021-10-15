@@ -31,7 +31,7 @@ def getPredictions(input_list):
 
 def result_PCOD(request):
     temp = {}
-    temp['Q1'] = int(request.POST.get('Q1'))
+    temp['Q1'] = request.POST.get('Q1')
     temp['Q2'] = int(request.POST.get('Q2'))
     temp['Q3'] = int(request.POST.get('Q3'))
     temp['Q4'] = int(request.POST.get('Q4'))
@@ -41,7 +41,7 @@ def result_PCOD(request):
     temp['Q8'] = int(request.POST.get('Q8'))
     temp['Q9'] = int(request.POST.get('Q9'))
     temp['Q10'] = int(request.POST.get('Q10'))
-    temp['Q11'] = int(request.POST.get('Q11'))
+    temp['Q11'] = request.POST.get('Q11')
     temp['Q12'] = int(request.POST.get('Q12'))
     temp['Q13'] = float(request.POST.get('Q13'))
     temp['Q14'] = float(request.POST.get('Q14'))
@@ -49,7 +49,7 @@ def result_PCOD(request):
     temp['Q16'] = int(request.POST.get('Q16'))
     temp['Q17'] = int(request.POST.get('Q17'))
     temp['Q18'] = int(request.POST.get('Q18'))
-    temp['Q19'] = int(request.POST.get('Q19'))
+    temp['Q19'] = request.POST.get('Q19')
     print(temp)
     input_list = list(temp.values())
     print(input_list)
