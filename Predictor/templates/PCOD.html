@@ -48,8 +48,8 @@
       <h1 class="logo me-auto"><a href="{% url 'home' %}">HoPE</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
-
-      <a href="{% url 'home' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Home Page</a>
+      <a href="{% url 'home' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Home Page</span></a>
+    
 
     </div>
   </header><!-- End Header -->
@@ -86,7 +86,7 @@
 
 
   <div class="faq-list" style="padding-bottom: 25px;">
-    Do You have excess of facial or body hair?
+    Do you have excess of facial or body hair?
     <br>
     <input type="radio" name="Q3" id="Q3" value="1">Yes
     <input style="margin-left: 20px;" type="radio" name="Q3" id="Q3" value="0">No
@@ -176,12 +176,18 @@
 
 
   <div class="faq-list" style="padding-bottom: 25px;">
-    <input class="form-control" placeholder="What time do you sleep?" required type="text" name="Q13">
+    What time do you sleep?
+    <br>
+    <input type="time" name="Q13" id="Q13" value="">
+    <!-- <input class="form-control" placeholder="What time do you sleep?" required type="text" name="Q13"> -->
   </div>
 
 
   <div class="faq-list" style="padding-bottom: 25px;">
-    <input class="form-control" placeholder="What time do you wake up?" required type="text" name="Q14">
+    What time do you wake up?
+    <br>
+    <input type="time" name="Q14" id="Q14" value="">
+    <!-- <input class="form-control" placeholder="What time do you wake up?" required type="text" name="Q14"> -->
   </div>
 
 
@@ -232,7 +238,7 @@
   </div>
 
 
-  <center><input class="btn btn-primary btn-lg btn-block" type="submit" value='Predict'></center>
+  <center><input class="appointment-btn scrollto" type="submit" value='Show Result'></center>
 
 </form>
 
