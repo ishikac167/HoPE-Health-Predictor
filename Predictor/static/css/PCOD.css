@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0px;
     text-align: center;
     padding: 20px;
@@ -34,5 +34,428 @@ body {
     margin: 5px;
     color: white;
     border-radius: 10px;
+  } */
+
+  /* body {
+  margin-top: 20px;
+} */
+
+/* Header */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+#header {
+  background: #fff;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+  top: 40px;
+  box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+}
+
+#header.header-scrolled {
+  top: 0;
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+  color: #2c4964;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #1977cc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3291e6;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #1977cc;
+  border-top-color: #d1e6f9;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
   }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/**
+* Appointment Button *
+*/
+.appointment-btn {
+  margin-left: 25px;
+  background: #1977cc;
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.appointment-btn:hover {
+  background: #166ab5;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .appointment-btn {
+    margin: 0 15px 0 0;
+    padding: 6px 18px;
+  }
+}
+
+/* Form CSS */
+.masthead {
+  padding: 3rem 0 7rem;
+  position: relative;
+  background-color: #dd3d31;
+  background-image: url(https://startbootstrap.com/assets/img/overlay.svg),
+    linear-gradient(45deg, #ce4a41 0%, #c2362c 100%);
+  background-size: cover;
+  z-index: 0;
+}
+
+.masthead svg.wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.masthead h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.1;
+  z-index: 1;
+}
+
+.masthead h2 {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  z-index: 1;
+  font-size: 1.2rem;
+}
+
+.masthead a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
+  z-index: 1;
+}
+
+@media (min-width: 992px) {
+  .masthead h1 {
+    font-size: 3rem;
+  }
+  .masthead h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.masthead .masthead-cards {
+  position: relative;
+  z-index: 1;
+}
+
+.masthead .masthead-cards .shape {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+}
+
+.masthead .masthead-cards .card {
+  opacity: 1;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  color: #212529;
+  transition: 0.15s all;
+}
+
+.masthead .masthead-cards .card:hover {
+  margin-top: -0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.masthead .masthead-cards .card:active {
+  margin-top: inherit;
+  margin-bottom: inherit;
+}
+
+.masthead .masthead-cards .card.border-bottom-blue:hover {
+  color: #2092ed;
+}
+
+.masthead .masthead-cards .card.border-bottom-green:hover {
+  color: #28a745;
+}
+
+.masthead .masthead-cards .card.border-bottom-red:hover {
+  color: #dd3d31;
+}
+
+.masthead .masthead-cards .card.border-bottom-yellow:hover {
+  color: #ffc107;
+}
+
+.masthead-page {
+  padding: 1rem 0 4rem;
+}
+
+@media (min-width: 992px) {
+  .masthead-page h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.border-bottom-yellow {
+  border-color: #ffc107 !important;
+}
+
+.border-bottom-red {
+  border-color: #dd3d31 !important;
+}
+
+.border-bottom-blue {
+  border-color: #2092ed !important;
+}
+
+.border-bottom-green {
+  border-color: #28a745 !important;
+}
+
+.border-bottom-blue,
+.border-bottom-green,
+.border-bottom-red,
+.border-bottom-yellow {
+  border-bottom: 0.4rem solid !important;
+}
+.shadow-lg {
+  box-shadow: 0 2rem 1.5rem -1.5rem rgba(33, 37, 41, 0.15),
+    0 0 1.5rem 0.5rem rgba(33, 37, 41, 0.05) !important;
+}
+.border-0 {
+  border: 0 !important;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  margin: 0%;
+}
+
+form {
+  background-color: bisque;
+  padding: 10px;
+}
+
+.bg-12 {
+  margin: 30px auto;
+  background: white;
+  padding: 20px 15px;
+}
+
+label.box {
+  display: flex;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+#one:checked ~ label.first,
+#two:checked ~ label.second,
+#three:checked ~ label.third,
+#four:checked ~ label.forth,
+#five:checked ~ label.fifth,
+#six:checked ~ label.sixth,
+#seven:checked ~ label.seveth,
+#eight:checked ~ label.eighth,
+#nine:checked ~ label.ninth,
+#tenth:checked ~ label.tenth,
+#Q5a:checked ~ label.fiva,
+#Q5b:checked ~ label.fivb,
+#Q6a:checked ~ label.fiva,
+#Q6b:checked ~ label.fivb,
+#Q7a:checked ~ label.fiva,
+#Q7b:checked ~ label.fivb,
+#Q8a:checked ~ label.fiva,
+#Q8b:checked ~ label.fivb,
+#Q9a:checked ~ label.fiva,
+#Q9b:checked ~ label.fivb,
+#Q10a:checked ~ label.fiva,
+#Q10b:checked ~ label.fivb,
+#Q11a:checked ~ label.fiva,
+#Q11b:checked ~ label.fivb,
+#Q11c:checked ~ label.fivc,
+#Q12a:checked ~ label.fiva,
+#Q12b:checked ~ label.fivb,
+#Q15a:checked ~ label.fiva,
+#Q15b:checked ~ label.fivb,
+#Q16a:checked ~ label.fiva,
+#Q16b:checked ~ label.fivb,
+#Q17a:checked ~ label.fiva,
+#Q17b:checked ~ label.fivb,
+#Q18a:checked ~ label.fiva,
+#Q18b:checked ~ label.fivb,
+#Q19a:checked ~ label.first,
+#Q19b:checked ~ label.second,
+#Q19c:checked ~ label.third,
+#Q19d:checked ~ label.forth {
+  border-color: #dd3d31;
+}
+
+#one:checked ~ label.first .circle,
+#two:checked ~ label.second .circle,
+#three:checked ~ label.third .circle,
+#four:checked ~ label.forth .circle,
+#five:checked ~ label.fifth .circle,
+#six:checked ~ label.sixth .circle,
+#seven:checked ~ label.seveth .circle,
+#eight:checked ~ label.eighth .circle,
+#nine:checked ~ label.ninth .circle,
+#ten:checked ~ label.tenth .circle,
+#Q5a:checked ~ label.fiva .circle,
+#Q5b:checked ~ label.fivb .circle,
+#Q6a:checked ~ label.fiva .circle,
+#Q6b:checked ~ label.fivb .circle,
+#Q7a:checked ~ label.fiva .circle,
+#Q7b:checked ~ label.fivb .circle,
+#Q8a:checked ~ label.fiva .circle,
+#Q8b:checked ~ label.fivb .circle,
+#Q9a:checked ~ label.fiva .circle,
+#Q9b:checked ~ label.fivb .circle,
+#Q10a:checked ~ label.fiva .circle,
+#Q10b:checked ~ label.fivb .circle,
+#Q11a:checked ~ label.fiva .circle,
+#Q11b:checked ~ label.fivb .circle,
+#Q11c:checked ~ label.fivc .circle,
+#Q12a:checked ~ label.fiva .circle,
+#Q12b:checked ~ label.fivb .circle,
+#Q15a:checked ~ label.fiva .circle,
+#Q15b:checked ~ label.fivb .circle,
+#Q16a:checked ~ label.fiva .circle,
+#Q16b:checked ~ label.fivb .circle,
+#Q17a:checked ~ label.fiva .circle,
+#Q17b:checked ~ label.fivb .circle,
+#Q18a:checked ~ label.fiva .circle,
+#Q18b:checked ~ label.fivb .circle,
+#Q19a:checked ~ label.first .circle,
+#Q19b:checked ~ label.second .circle,
+#Q19c:checked ~ label.third .circle,
+#Q19d:checked ~ label.forth .circle {
+  border: 6px solid #dd3d31;
+  background-color: #fff;
+}
+
+label.box:hover {
+  background: #d5bbf7;
+}
+
+label.box .course {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+label.box .circle {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #ddd;
+  display: inline-block;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.btn btn-outline-danger {
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+@media (max-width: 450px) {
+  .subject {
+    font-size: 12px;
+  }
+}
+
 

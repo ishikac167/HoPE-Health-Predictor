@@ -33,10 +33,12 @@
     <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   
     <!-- Template Main CSS File -->
     <!-- <link rel="stylesheet" href="{% static 'css/PCOD.css' %}"> -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/PCOD.css' %}" rel="stylesheet">
 </head>
 
 
@@ -45,7 +47,7 @@
   <header id="header">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="{% url 'home' %}">HoPE</a></h1>
+      <h1 class="logo me-auto"><a style="font-family: Poppins, sans-serif;" href="{% url 'home' %}">HoPE</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
       <a href="{% url 'home' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Home Page</span></a>
@@ -54,6 +56,106 @@
     </div>
   </header><!-- End Header -->
 
+  <section class="masthead">
+    <div class="container" >
+        <div class="row align-items-center">
+            <div class="col-lg-7 py-5">
+                <h1 class="mb-4">PCOD</h1>
+                <h2 class="m-0">
+                    Worldwide, PCOS affects 6% to 10% of women, making it the most common endocrine disorder in women of childbearing age.
+By age 40, 40% of women with PCOS will develop pre-diabetes or diabetes.<br>Take your test now </h2>
+            </div>
+            <div class="col-lg-5">
+                <div class="py-5 px-4 masthead-cards">
+                    <div class="d-flex">
+                        <a href="#" class="w-50 pr-3 pb-4">
+                            <div class="card border-0 border-bottom-red shadow-lg shadow-hover">
+                                <div class="card-body text-center">
+                                    <div class="text-center">
+                                        <i class="fa fa-pen fa-4x my-2"></i>
+                                    </div>
+                                    Test
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="w-50 pl-3 pb-4">
+                            <div class="card border-0 border-bottom-blue shadow-lg shadow-hover">
+                                <div class="card-body text-center">
+                                    <div class="text-center">
+                                        <i class="fa fa-th fa-4x my-2"></i>
+                                    </div>
+                                  Blogs
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex">
+                        <a href="#" class="w-50 pr-3">
+                            <div class="card border-0 border-bottom-yellow shadow-lg shadow-hover">
+                                <div class="card-body text-center">
+                                    <div class="text-center">
+                                        <i class="fa fa-4x fa-code my-2"></i>
+                                    </div>
+                                   Prediction
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="w-50 pl-3">
+                            <div class="card border-0 border-bottom-green shadow-lg shadow-hover">
+                                <div class="card-body text-center">
+                                    <div class="text-center">
+                                        <i class="fa fa-4x fa-list my-2"></i>
+                                    </div>
+                                  Doctor List
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="shape"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <svg style="pointer-events: none" class="wave" width="100%" height="50px" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 75">
+        <defs>
+            <style>
+                .a {
+                    fill: none;
+                }
+                
+                .b {
+                    clip-path: url(#a);
+                }
+                
+                .c,
+                .d {
+                    fill: #f9f9fc;
+                }
+                
+                .d {
+                    opacity: 0.5;
+                    isolation: isolate;
+                }
+            </style>
+            <clipPath id="a">
+                <rect class="a" width="1920" height="75"></rect>
+            </clipPath>
+        </defs>
+        <title>wave</title>
+        <g class="b">
+            <path class="c" d="M1963,327H-105V65A2647.49,2647.49,0,0,1,431,19c217.7,3.5,239.6,30.8,470,36,297.3,6.7,367.5-36.2,642-28a2511.41,2511.41,0,0,1,420,48"></path>
+        </g>
+        <g class="b">
+            <path class="d" d="M-127,404H1963V44c-140.1-28-343.3-46.7-566,22-75.5,23.3-118.5,45.9-162,64-48.6,20.2-404.7,128-784,0C355.2,97.7,341.6,78.3,235,50,86.6,10.6-41.8,6.9-127,10"></path>
+        </g>
+        <g class="b">
+            <path class="d" d="M1979,462-155,446V106C251.8,20.2,576.6,15.9,805,30c167.4,10.3,322.3,32.9,680,56,207,13.4,378,20.3,494,24"></path>
+        </g>
+        <g class="b">
+            <path class="d" d="M1998,484H-243V100c445.8,26.8,794.2-4.1,1035-39,141-20.4,231.1-40.1,378-45,349.6-11.6,636.7,73.8,828,150"></path>
+        </g>
+    </svg>
+  </section>
 
   <!-- <h1 class="logo me-auto">PCOD Prediction</h1> -->
 
@@ -62,184 +164,281 @@
   </p> -->
   <section id="faq" class="faq section-bg">
   <form action="{% url 'result_PCOD' %}" method="POST">
-    <center><h1 class="logo me-auto">PCOD Prediction</h1></center>
     {% csrf_token %}
  
-  <div class="faq-list">
-    Is your menstural cycle regular?
-    <br>
-    <!-- <input class="form-control" placeholder="Do You get menstural periods at regular intervals?" required type="text" name="Q1"> -->
-    <input type="radio" name="Q1" id="Q1" value="y">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q1" id="Q1" value="im">Infrequent Menses
-    <input style="margin-left: 20px;" type="radio" name="Q1" id="Q1" value="ib">Irregular Bleeding
-    <input style="margin-left: 20px;" type="radio" name="Q1" id="Q1" value="hb">Heavy Bleeding
+    <section class="bg-12">
+      <div class=" container mb-5" >
+          <div class="row">
+              <div class="col-12">
+                  <fieldset>
+                  <p class="fw-bold">1.Is your menstural cycle regular?</p>
+                  <div class="box"> <input type="radio" name="Q1" id="one" value="y"> <input type="radio" name="Q1" id="two" value="im"> <input type="radio" name="Q1" id="three" value="ib"> <input type="radio" name="Q1" id="four" value="hb"> 
+                      <label for="one" class="box first">
+                          <div class="course"> <span class="circle"></span> <span class="subject">Yes </span> </div>
+                      </label> <label for="two" class="box second">
+                          <div class="course"> <span class="circle"></span> <span class="subject"> Infrequent Menses </span> </div>
+                      </label> <label for="three" class="box third">
+                          <div class="course"> <span class="circle"></span> <span class="subject">Irregular Bleeding </span> </div>
+                      </label> <label for="four" class="box forth">
+                          <div class="course"> <span class="circle"></span> <span class="subject"> Heavy Bleeding </span> </div>
+                      </label>
+                  </div>
+              </fieldset>
+              </div>
+          <div class="col-12">
+          <fieldset>
+              <p class="fw-bold mt-5">2.Are you gaining weight Rapidly?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q2" id="five"value="1"> <label for="five" class="box fifth w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Yes</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q2" id="six" value="0"> <label for="six" class="box sixth w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject"> No </span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </fieldset>
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">3. Do you have excess of facial or body hair?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q3" id="seven" value="1"> <label for="seven" class="box seveth w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Yes</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q3" id="eight" value="0"> <label for="eight" class="box eighth w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject"> No </span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">4. Do you have patches of dark areas on your skin?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q4" id="nine" value="1"> <label for="nine" class="box ninth w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Yes</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q4" id="ten" value="0"> <label for="ten" class="box tenth w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject"> No </span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">5.  Do you suffer from pimples?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q5" id="Q5a" value="1"> <label for="Q5a" class="box fiva w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Yes</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q5" id="Q5b" value="0"> <label for="Q5b" class="box fivb w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject"> No </span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">6.Are you facing deppression and anxiety?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q6" id="Q6a" value="1"> <label for="Q6a" class="box fiva w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Yes</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q6" id="Q6b" value="0"> <label for="Q6b" class="box fivb w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject"> No </span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">7. Do you have any family history of Diabetes and/or Hyper Tension?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q7" id="Q7a" value="1"> <label for="Q7a" class="box fiva w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Yes</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q7" id="Q7b" value="0"> <label for="Q7b" class="box fivb w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject"> No </span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">8. Are you finding any difficulty in maintaining your body weight?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q8" id="Q8a" value="1"> <label for="Q8a" class="box fiva w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Yes</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q8" id="Q8b" value="0"> <label for="Q8b" class="box fivb w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject"> No </span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">9. Do you have an oily skin?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q9" id="Q9a" value="1"> <label for="Q9a" class="box fiva w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Yes</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q9" id="Q9b" value="0"> <label for="Q9b" class="box fivb w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject"> No </span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">10. Are you losing lot of hair or has it became thinner in its strength?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q10" id="Q10a" value="1"> <label for="Q10a" class="box fiva w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Yes</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q10" id="Q10b" value="0"> <label for="Q10b" class="box fivb w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject"> No </span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">11.  Where do you frequently eat?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q11" id="Q11a" value="hf"> <label for="Q11a" class="box fiva w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Home Food</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q11" id="Q11b" value="cc"> <label for="Q11b" class="box fivb w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Campus Canteen </span> </div>
+                          </label> </div>
+                          <div class="col-md-6 box"> <input type="radio" name="Q11" id="Q11c" value="hm"> <label for="Q11c" class="box fivc w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Hostel Mess</span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">12.Do you exercise reguarly?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q12" id="Q12a" value="1"> <label for="Q12a" class="box fiva w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Yes</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q12" id="Q12b" value="0"> <label for="Q12b" class="box fivb w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject"> No </span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">13.What time do you sleep?</p>
+              <!-- <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="time" name="Q13" id="Q13" value="1"> <label for="Q13" >
+                              <div class="course"> </div>
+                          </label> </div> -->
+                          <input class="form-control" placeholder="What time do you sleep?" required type="text" name="Q13"> 
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">14.What time do you wake up?</p>
+              <!-- <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="time" name="Q14" id="Q14" value="1"> <label for="Q14" >
+                              <div class="course"> </div>
+                          </label> </div> -->
+                          <input class="form-control" placeholder="What time do you wake up?" required type="text" name="Q14"> 
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">15.Are you mentally stressed if it is your first time a hostel?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q15" id="Q15a" value="1"> <label for="Q15a" class="box fiva w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Yes</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q15" id="Q15b" value="0"> <label for="Q15b" class="box fivb w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject"> No </span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">16. Are you mentally stressed due to personal problems?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q16" id="Q16a" value="1"> <label for="Q16a" class="box fiva w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Yes</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q16" id="Q16b" value="0"> <label for="Q16b" class="box fivb w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject"> No </span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">17. Are you mentally stressed due to peer presure?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q17" id="Q17a" value="1"> <label for="Q17a" class="box fiva w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Yes</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q17" id="Q17b" value="0"> <label for="Q17b" class="box fivb w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject"> No </span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="col-12">
+              <p class="fw-bold mt-5">18.Are you mentally stressed due to change in dietry habits?</p>
+              <div>
+                  <div class="row">
+                      <div class="col-md-6 box"> <input type="radio" name="Q18" id="Q18a" value="1"> <label for="Q18a" class="box fiva w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject">Yes</span> </div>
+                          </label> </div>
+                      <div class="col-md-6 box"> <input type="radio" name="Q18" id="Q18b" value="0"> <label for="Q18b" class="box fivb w-100">
+                              <div class="course"> <span class="circle"></span> <span class="subject"> No </span> </div>
+                          </label> </div>
+                      
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="col-12">
+              <p class="fw-bold mt-5">19.How often do you eat fast foods?</p>
+              <div class="box"> <input type="radio" name="Q19" id="Q19a" value="ed"> <input type="radio" name="Q19" id="Q19b" value="w"> <input type="radio" name="Q19" id="Q19c" value="m"> <input type="radio" name="Q19" id="Q19d" value="y"> 
+                  <label for="Q19a" class="box first">
+                      <div class="course"> <span class="circle"></span> <span class="subject">Everyday </span> </div>
+                  </label> <label for="Q19b" class="box second">
+                      <div class="course"> <span class="circle"></span> <span class="subject"> Once in a week </span> </div>
+                  </label> <label for="Q19c" class="box third">
+                      <div class="course"> <span class="circle"></span> <span class="subject">Once in a month </span> </div>
+                  </label> <label for="Q19d" class="box forth">
+                      <div class="course"> <span class="circle"></span> <span class="subject"> Once in a year </span> </div>
+                  </label>
+              </div>
+          </div>
+      </section>
+      <div class="col-12">
+          <div class="d-flex justify-content-center"> <input class="btn btn-outline-danger" type="submit" value='Show Result'>
   </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px; padding-top: 25px;">
-    Are you gaining weight Rapidly?
-    <br>
-    <input type="radio" name="Q2" id="Q2" value="1">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q2" id="Q2" value="0">No
-    <!-- <input class="form-control" placeholder="Are you gaining weight Rapidly?" required type="text" name="Q2"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    Do you have excess of facial or body hair?
-    <br>
-    <input type="radio" name="Q3" id="Q3" value="1">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q3" id="Q3" value="0">No
-    <!-- <input class="form-control" placeholder="Do You have excess of facial or body hair?" required type="text" name="Q3"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    Do you have patches of dark areas on your skin?
-    <br>
-    <input type="radio" name="Q4" id="Q4" value="1">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q4" id="Q4" value="0">No
-    <!-- <input class="form-control" placeholder="Do you Have patches of dark areas on your skin?" required type="text" name="Q4"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    Do you suffer from pimples?
-    <br>
-    <input type="radio" name="Q5" id="Q5" value="1">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q5" id="Q5" value="0">No
-    <!-- <input class="form-control" placeholder="Do You suffer from pimples?" type="text" required name="Q5"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    Are you facing deppression and anxiety?
-    <br>
-    <input type="radio" name="Q6" id="Q6" value="1">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q6" id="Q6" value="0">No
-    <!-- <input class="form-control" placeholder="Do you face deppression and anxiety?" required type="text" name="Q6"> -->
-  </div>
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    Do you have any family history of Diabetes and/or Hyper Tension?
-    <br>
-    <input type="radio" name="Q7" id="Q7" value="1">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q7" id="Q7" value="0">No
-    <!-- <input class="form-control" placeholder="Do you any family history of Diabetics and Hyper Tension?" required type="text" name="Q7"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    Are you finding any difficulty in maintaining your body weight?
-    <br>
-    <input type="radio" name="Q8" id="Q8" value="1">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q8" id="Q8" value="0">No
-    <!-- <input class="form-control" placeholder="Are you finding any difficulty in maintaining your body weight?" required type="text" name="Q8"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    Do you have an oily skin?
-    <br>
-    <input type="radio" name="Q9" id="Q9" value="1">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q9" id="Q9" value="0">No
-    <!-- <input class="form-control" placeholder="Do you have an oily skin?" required type="text" name="Q9"> -->
-  </div>
-
-  
-  <div class="faq-list" style="padding-bottom: 25px;">
-    Are you losing lot of hair or has it became thinner in its strength?
-    <br>
-    <input type="radio" name="Q10" id="Q10" value="1">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q10" id="Q10" value="0">No
-    <!-- <input class="form-control" placeholder="Are you losing lot of hair or has it became thinner in its strength?" required type="text" name="Q10"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    Where do you frequently eat?
-    <br>
-    <input type="radio" name="Q11" id="Q11" value="hf">Home Food
-    <input style="margin-left: 20px;" type="radio" name="Q11" id="Q11" value="cc">Campus Canteen
-    <input style="margin-left: 20px;" type="radio" name="Q11" id="Q11" value="hm">Hostel Mess
-    <!-- <input class="form-control" placeholder="Where do you Frequently eat?" required type="text" name="Q11"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    Do you exercise reguarly?
-    <br>
-    <input type="radio" name="Q12" id="Q12" value="1">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q12" id="Q12" value="0">No
-    <!-- <input class="form-control" placeholder="Do you exercise reguarly?" required type="text" name="Q12"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    What time do you sleep?
-    <br>
-    <input type="time" name="Q13" id="Q13" value="">
-    <!-- <input class="form-control" placeholder="What time do you sleep?" required type="text" name="Q13"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    What time do you wake up?
-    <br>
-    <input type="time" name="Q14" id="Q14" value="">
-    <!-- <input class="form-control" placeholder="What time do you wake up?" required type="text" name="Q14"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    Are you mentally stressed if it is your first time a hostel?
-    <br>
-    <input type="radio" name="Q15" id="Q15" value="1">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q15" id="Q15" value="0">No
-    <!-- <input class="form-control" placeholder="Are you mentally stressed if it is your first time a hostel?" required type="text" name="Q15"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    Are you mentally stressed due to personal problems?
-    <br>
-    <input type="radio" name="Q16" id="Q16" value="1">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q16" id="Q16" value="0">No
-    <!-- <input class="form-control" placeholder="Are you mentally stressed due to personal problems?" required type="text" name="Q16"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    Are you mentally stressed due to peer presure?
-    <br>
-    <input type="radio" name="Q17" id="Q17" value="1">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q17" id="Q17" value="0">No
-    <!-- <input class="form-control" placeholder="Are you mentally stressed due to peer presure?" required type="text" name="Q17"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    Are you mentally stressed due to change in dietry habits?
-    <br>
-    <input type="radio" name="Q18" id="Q18" value="1">Yes
-    <input style="margin-left: 20px;" type="radio" name="Q18" id="Q18" value="0">No
-    <!-- <input class="form-control" placeholder="Are you mentally stressed due to change in dietry habits?" required type="text" name="Q18"> -->
-  </div>
-
-
-  <div class="faq-list" style="padding-bottom: 25px;">
-    How often do you eat fast foods?
-    <br>
-    <input type="radio" name="Q19" id="Q19" value="ed">Everyday
-    <input style="margin-left: 20px;" type="radio" name="Q19" id="Q19" value="w">Once in a week
-    <input style="margin-left: 20px;" type="radio" name="Q19" id="Q19" value="m">Once in a month
-    <input style="margin-left: 20px;" type="radio" name="Q19" id="Q19" value="y">Once in a year
-    <!-- <input class="form-control" placeholder="How often do you eat fast foods?" required type="text" name="Q19"> -->
-  </div>
-
-
-  <center><input class="appointment-btn scrollto" type="submit" value='Show Result'></center>
-
+      </div>
 </form>
 
 </section>
