@@ -30,6 +30,10 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+import sys
+
+sys.modules['fontawesome_free'] = __import__('fontawesome-free')
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Predictor',
+    # 'fontawesome_free',
 ]
 
 MIDDLEWARE = [
