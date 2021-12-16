@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 import pickle
+from bs4 import BeautifulSoup
+import requests
 
 # Create your views here.
 # def Signup(request):
@@ -62,3 +64,22 @@ def result_PCOD(request):
 
     return render(request, 'result_PCOD.html', context)
 
+def DocRecomm(request):
+    if request.method == 'POST':
+        temp={}
+        temp['city'] = request.POST.get('city')
+        city = temp['city']
+        error = False
+        data = []
+        try:
+            url = 'https://www.practo.com/'+city+'/endocrinologist'
+            html_text = requests.get(url).text
+            soup = BeautifulSoup(html_text,'lxml')
+            names = soup.find_all('h2',class_='doctor-name')
+            places = soup.find_all('div',class_='u-bold u-d-inlineblock u-valign--middle')
+            for i in range(len(names)):
+                val = {'name':names[i].text,'place':places[i].text}
+                data.append(val)
+        except:
+            error = True
+        return render(request,'doctor.html',{'data':data})

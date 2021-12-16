@@ -60,10 +60,10 @@
     <div class="container" >
         <div class="row align-items-center">
             <div class="col-lg-7 py-5">
-                <h1 class="mb-4">PCOD</h1>
+                <h1 class="mb-4"><i class="fa fa-ribbon fa-2x my-2"></i> PCOD</h1>
                 <h2 class="m-0">
-                    Worldwide, PCOS affects 6% to 10% of women, making it the most common endocrine disorder in women of childbearing age.
-By age 40, 40% of women with PCOS will develop pre-diabetes or diabetes.<br>Take your test now </h2>
+                    Worldwide, PCOD affects 6% to 10% of women, making it the most common endocrine disorder in women of childbearing age.
+By the age of 40, 40% of women with PCOD develop pre-diabetes or diabetes.<br>Take your test now </h2>
             </div>
             <div class="col-lg-5">
                 <div class="py-5 px-4 masthead-cards">
@@ -162,7 +162,6 @@ By age 40, 40% of women with PCOS will develop pre-diabetes or diabetes.<br>Take
   <!-- <p style="color:rgb(51, 51, 83); font-weight: 700;">
     Can a passenger with your given characteristics survive?
   </p> -->
-  <section id="faq" class="faq section-bg">
   <form action="{% url 'result_PCOD' %}" method="POST">
     {% csrf_token %}
  
@@ -435,6 +434,7 @@ By age 40, 40% of women with PCOS will develop pre-diabetes or diabetes.<br>Take
               </div>
           </div>
       </section>
+      
       <div class="col-12">
           <div class="d-flex justify-content-center"> <input class="btn btn-outline-danger" type="submit" value='Show Result'>
   </div>

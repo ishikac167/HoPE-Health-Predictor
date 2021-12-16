@@ -1,0 +1,102 @@
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style media="screen">
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+box-sizing: border-box;
+}
+
+body {
+font-family: Montserrat, sans-serif;
+background:#111;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+min-height: 100vh;
+margin: 0;
+}
+
+h3 {
+margin: 10px 0;
+}
+
+h6 {
+margin: 5px 0;
+text-transform: uppercase;
+}
+.card-container {
+background-color: #231E39;
+border-radius: 5px;
+box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+color: #B3B8CD;
+padding-top: 30px;
+position: relative;
+width: 350px;
+max-width: 100%;
+text-align: center;
+}
+
+.card-container .round {
+border: 1px solid #03BFCB;
+border-radius: 50%;
+padding: 7px;
+}
+
+
+
+
+
+.example_e {
+border: none;
+background: #404040;
+color: #ffffff !important;
+font-weight: 100;
+padding: 20px;
+text-transform: uppercase;
+border-radius: 6px;
+display: inline-block;
+transition: all 0.3s ease 0s;
+}
+.example_e:hover {
+color: #404040 !important;
+font-weight: 700 !important;
+letter-spacing: 3px;
+background: none;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.3s ease 0s;
+}
+
+    </style>
+  </head>
+  <body>
+    {% if not data %}
+    <h1 class="small" style="color:red">Sorry,No Data Available for the Searched City</h1>
+      <br><br>
+      <center>
+        <div class="button_cont" align="center"><a class="example_e" href="/" rel="nofollow noopener">Back to Home</a></div>
+      </center>
+    {% endif %}
+    {% if data %}
+    <div class="test" >
+      <h1 class="small">– Nearby Doctors –</h1>
+    </div>
+    <br><br>
+    {% for i in data %}
+    <div class="card-container">
+      <h3>{{i.name}}</h3>
+      <h6>{{i.place}}</h6>
+      <br>
+    </div>
+    <br>
+    <br>
+    {% endfor %}
+    {% endif %}
+  </body>
+</html>
