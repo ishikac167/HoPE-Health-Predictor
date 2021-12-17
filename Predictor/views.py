@@ -64,15 +64,20 @@ def result_PCOD(request):
 
     return render(request, 'result_PCOD.html', context)
 
+def DocInput(request):
+    return render(request,'doctor_input.html')
+
 def DocRecomm(request):
     if request.method == 'POST':
         temp={}
+        temp['specialist'] = request.POST.get('specialist')
         temp['city'] = request.POST.get('city')
         city = temp['city']
+        specialist = temp['specialist']
         error = False
         data = []
         try:
-            url = 'https://www.practo.com/'+city+'/endocrinologist'
+            url = 'https://www.practo.com/'+city+'/'+specialist
             html_text = requests.get(url).text
             soup = BeautifulSoup(html_text,'lxml')
             names = soup.find_all('h2',class_='doctor-name')
@@ -82,4 +87,4 @@ def DocRecomm(request):
                 data.append(val)
         except:
             error = True
-        return render(request,'doctor.html',{'data':data})
+        return render(request,'doctor.html', {'data':data})
