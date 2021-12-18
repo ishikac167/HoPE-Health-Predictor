@@ -83,7 +83,7 @@ def DocRecomm(request):
             names = soup.find_all('h2',class_='doctor-name')
             places = soup.find_all('div',class_='u-bold u-d-inlineblock u-valign--middle')
             for i in range(len(names)):
-                val = {'name':names[i].text,'place':places[i].text}
+                val = {'SrNo':i+1,'name':names[i].text,'place':places[i].text}
                 data.append(val)
         except:
             error = True

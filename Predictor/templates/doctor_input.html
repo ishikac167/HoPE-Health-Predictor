@@ -10,7 +10,7 @@
         <link href="{% static 'img/LOGO.png' %}" rel="icon">
         <link href="{% static 'img/HoPE.png' %}" rel="apple-touch-icon">
       
-        <title>PCOD Prediction</title>
+        <title>Doctor Recommendation</title>
       
         
       
@@ -106,6 +106,10 @@
   text-transform: uppercase;
   letter-spacing: 2.5px;
 } */
+
+input {
+  margin: 20px;
+}
     </style>
   </head>
   <body>
@@ -120,14 +124,17 @@
     
         </div>
       </header><!-- End Header -->
-    <div class="main-content">
+    <!-- <div class="main-content">
       <div class="landing-container">
       <div class="home-landing-text">
-        <span class="light">Contact Doctors in Your City!</span><br><br> Enter Your City
+        <span class="light">Search for Doctors in Your City!</span><br><br> Enter Your City and Specialist
       </div>
       <div class="header-div"></div>
-      <div class="home-landing-subtext">
+      <div class="home-landing-subtext"> -->
+
+
         <center>
+          <strong style="font-size: 30px">Enter the City and Specialist</strong> 
     <div class="container">
       <form id="contact" method="post" enctype="multipart/form-data" action="{% url 'Doctor' %} ">
         {% csrf_token %}
@@ -136,7 +143,7 @@
           <input placeholder="Enter Specialist" type="text" tabindex="2" name="specialist" required value={{temp.specialist}}>
         </fieldset>
         <fieldset>
-          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Submit">Submit</button>
+          <button class="appointment-btn scrollto" name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Submit">Submit</button>
         </fieldset>
       </form>
     </div>

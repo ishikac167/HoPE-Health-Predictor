@@ -10,7 +10,7 @@
     <link href="{% static 'img/LOGO.png' %}" rel="icon">
     <link href="{% static 'img/HoPE.png' %}" rel="apple-touch-icon">
   
-    <title>PCOD Prediction</title>
+    <title>Doctor Recommendation</title>
   
     
   
@@ -109,6 +109,10 @@ background: none;
 transition: all 0.3s ease 0s;
 } */
 
+body {
+  margin: 10px;
+}
+
     </style>
   </head>
   <body>
@@ -125,6 +129,8 @@ transition: all 0.3s ease 0s;
   
       </div>
     </header><!-- End Header -->
+   
+
     {% if not data %}
     <h1 class="small" style="color:red">Sorry,No Data Available for the Searched City</h1>
       <br><br>
@@ -134,13 +140,14 @@ transition: all 0.3s ease 0s;
     {% endif %}
     {% if data %}
     <div class="test" >
-      <h1 class="small">– Nearby Doctors –</h1>
+      <!-- <h1 class="small">– Nearby Doctors –</h1> -->
+      <center><strong style="font-size: 30px">Nearby Doctors Registered on Practo</strong></center>
     </div>
     <br><br>
     {% for i in data %}
     <div class="card-container">
-      <h3>{{i.name}}</h3>
-      <h6>{{i.place}}</h6>
+      <h3>{{i.SrNo}}. {{i.name}}</h3>
+      <h6>Location: {{i.place}}</h6>
       <br>
     </div>
     <br>
