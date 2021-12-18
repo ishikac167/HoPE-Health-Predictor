@@ -109,7 +109,7 @@ background: none;
 transition: all 0.3s ease 0s;
 } */
 
-body {
+.center {
   margin: 10px;
 }
 
@@ -130,8 +130,8 @@ body {
       </div>
     </header><!-- End Header -->
    
-
-    {% if not data %}
+    <section class="center">
+      {% if not data %}
     <h1 class="small" style="color:red">Sorry,No Data Available for the Searched City</h1>
       <br><br>
       <center>
@@ -154,5 +154,7 @@ body {
     <br>
     {% endfor %}
     {% endif %}
+    </section>
+    
   </body>
 </html>
