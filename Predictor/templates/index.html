@@ -27,6 +27,9 @@
   <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles/fontawesome/css/fontawesome-all.css">
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
@@ -145,7 +148,7 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="fas fa-heartbeat"></i></div>
-              <h4 class="title"><a href="">Heart Attack</a></h4>
+              <h4 class="title"><a href="{% url 'HA' %}">Heart Attack</a></h4>
               <p class="description">A blockage of blood flow to the heart muscle results in a heart attack</p>
             </div>
           </div>
@@ -278,7 +281,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-heartbeat"></i></div>
-              <h4><a href="">Heart Attack</a></h4>
+              <h4><a href="{% url 'HA' %}">Heart Attack</a></h4>
               <p>The user has to answer some basic lifestyle questions a record a video of his face movements for 15 seconds.</p>
             </div>
           </div>
@@ -976,10 +979,10 @@
   <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
   <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
 
-  <script
+  <!-- <script
       src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
       data-auto-a11y="true"
-    ></script>
+    ></script> -->
 
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>

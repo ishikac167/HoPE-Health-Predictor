@@ -48,6 +48,19 @@
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto"><a style="font-family: Poppins, sans-serif;" href="{% url 'home' %}">HoPE</a></h1>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <!-- <li><a class="dropdown" href="#services">Services</a></li> -->
+          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'HA' %}">Heart Attack Probability</a></li>
+              <li><a href="{% url 'PCOD' %}">PCOD</a></li>
+              <li><a href="">Myopia</a></li>
+              <li><a href="">Colour Blindness</a></li>
+            </ul>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
       <a href="{% url 'home' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Home Page</span></a>
@@ -62,7 +75,7 @@
             <div class="col-lg-7 py-5">
                 <h1 class="mb-4"><i class="fa fa-ribbon fa-2x my-2"></i> PCOD</h1>
                 <h2 class="m-0">
-                    Worldwide, PCOD affects 6% to 10% of women, making it the most common endocrine disorder in women of childbearing age.
+                    PCOD (Polycystic Ovarian Disease) is a medical condition in which the woman ovaries produce immature or partially mature eggs in large numbers and over the time these become cysts in ovaries. Worldwide, PCOD affects 6% to 10% of women, making it the most common endocrine disorder in women of childbearing age.
 By the age of 40, 40% of women with PCOD develop pre-diabetes or diabetes.<br>Take your test now </h2>
             </div>
             <div class="col-lg-5">

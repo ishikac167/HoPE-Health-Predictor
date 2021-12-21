@@ -47,6 +47,19 @@
           <h1 class="logo me-auto"><a style="font-family: Poppins, sans-serif;" href="{% url 'home' %}">HoPE</a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html" class="logo me-auto"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
+          <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+              <!-- <li><a class="dropdown" href="#services">Services</a></li> -->
+              <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="{% url 'HA' %}">Heart Attack Probability</a></li>
+                  <li><a href="{% url 'PCOD' %}">PCOD</a></li>
+                  <li><a href="">Myopia</a></li>
+                  <li><a href="">Colour Blindness</a></li>
+                </ul>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
           <a href="{% url 'home' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Home Page</span></a>
         
     
@@ -57,9 +70,11 @@
         <div class="container" >
             <div class="row align-items-center">
                 <div class="col-lg-7 py-5">
-                    <h1 class="mb-4"><i class="fa fa-ribbon fa-2x my-2"></i>Heart Attack</h1>
+                    <h1 class="mb-4"><i class="fa fa-heartbeat fa-2x my-2"></i>Heart Attack</h1>
                     <h2 class="m-0">
-                       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, doloribus assumenda. Excepturi repellat dolorum suscipit? Doloremque, saepe omnis. Nam recusandae quod exercitationem labore iure molestias temporibus non sequi dignissimos laudantium? Quaerat ipsam eum et! Minus, sit perspiciatis non harum voluptatibus ducimus, neque error earum autem assumenda possimus eveniet iste facere! Sapiente delectus maiores, quis quae eum dolores ratione sit velit provident ipsa necessitatibus iusto eveniet at sed modi nisi explicabo asperiores fugit non sint quasi aliquid tempora. Aspernatur modi sint, facilis aperiam quod nostrum nihil assumenda aliquam commodi rerum suscipit, at temporibus cum accusamus in sapiente maxime voluptates nemo debitis. </h2>
+                        A heart attack occurs when the flow of blood to the heart is blocked. The blockage is most often a buildup of fat, cholesterol and other substances, which form a plaque in the arteries that feed the heart (coronary arteries). A heart attack, also called a myocardial infarction, can be fatal, but treatment has improved dramatically over the years.
+                        <br> 
+                        Take your test now to know about the probablity of you getting a heart attack </h2>
                 </div>
                 <div class="col-lg-5">
                     <div class="py-5 px-4 masthead-cards">
@@ -68,7 +83,7 @@
                                 <div class="card border-0 border-bottom-red shadow-lg shadow-hover">
                                     <div class="card-body text-center">
                                         <div class="text-center">
-                                            <i class="fa fa-heartbeat fa-4x my-2"></i>
+                                            <i class="fa fa-pen fa-4x my-2"></i>
                                         </div>
                                         Test
                                     </div>
