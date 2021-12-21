@@ -36,12 +36,17 @@
     border-radius: 10px;
   } */
 
-  /* body {
+/* body {
   margin-top: 20px;
 } */
 
 /* Header */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -91,7 +96,12 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -140,7 +150,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(360deg);
   }
 }
-
 
 /**
 * Appointment Button *
@@ -339,7 +348,18 @@ label.box {
   cursor: pointer;
   border: 1px solid #ddd;
 }
-
+#male:checked ~ label.male,
+#female:checked ~ label.female,
+#currentSmoker_yes:checked ~ label.currentSmoker_yes,
+#currentSmoker_no:checked ~ label.currentSmoker_no,
+#BPMeds_yes:checked ~ label.BPMeds_yes,
+#BPMeds_no:checked ~ label.BPMeds_no,
+#prevalentStroke_yes:checked ~ label.prevalentStroke_yes,
+#prevalentStroke_no:checked ~ label.prevalentStroke_no,
+#prevalentHyp_yes:checked ~ label.prevalentHyp_yes,
+#prevalentHyp_no:checked ~ label.prevalentHyp_no,
+#diabetes_yes:checked ~ label.diabetes_yes,
+#diabetes_no:checked ~ label.diabetes_no,
 #one:checked ~ label.first,
 #two:checked ~ label.second,
 #three:checked ~ label.third,
@@ -381,7 +401,18 @@ label.box {
 #Q19d:checked ~ label.forth {
   border-color: #dd3d31;
 }
-
+#currentSmoker_yes:checked ~ label.currentSmoker_yes .circle,
+#currentSmoker_no:checked ~ label.currentSmoker_no .circle,
+#BPMeds_yes:checked ~ label.BPMeds_yes .circle,
+#BPMeds_no:checked ~ label.BPMeds_no .circle,
+#prevalentStroke_yes:checked ~ label.prevalentStroke_yes .circle,
+#prevalentStroke_no:checked ~ label.prevalentStroke_no .circle,
+#prevalentHyp_yes:checked ~ label.prevalentHyp_yes .circle,
+#prevalentHyp_no:checked ~ label.prevalentHyp_no .circle,
+#diabetes_yes:checked ~ label.diabetes_yes .circle,
+#diabetes_no:checked ~ label.diabetes_no .circle,
+#male:checked ~ label.male .circle,
+#female:checked ~ label.female .circle,
 #one:checked ~ label.first .circle,
 #two:checked ~ label.second .circle,
 #three:checked ~ label.third .circle,
@@ -457,5 +488,3 @@ input[type="radio"] {
     font-size: 12px;
   }
 }
-
-

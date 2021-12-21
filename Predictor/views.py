@@ -3,6 +3,10 @@ from django.views.generic import TemplateView
 import pickle
 from bs4 import BeautifulSoup
 import requests
+import cv2
+from django.core.files.storage import FileSystemStorage
+from django.conf import settings
+from .main import Main
 
 # Create your views here.
 # def Signup(request):
@@ -11,6 +15,65 @@ import requests
 # def Login(request):
 #     return render(request, 'login.html')
 
+baseUrl = settings.MEDIA_ROOT_URL + settings.MEDIA_URL
+
+with open(baseUrl + 'heart_attack_pred_model.pkl', 'rb') as file:
+    cat_model = pickle.load(file)
+
+
+def predict_from_arr(arr):
+    pred = cat_model.predict(arr)
+    return(pred)
+
+# Create your views here.
+
+
+def HA(request):
+
+    return render(request, 'HA.html')
+
+
+def result_HA(request):
+    if request.method == 'POST':
+        temp = {}
+        temp['gender'] = request.POST.get('gender')
+        temp['age'] = request.POST.get('age')
+        temp['currentSmoker'] = request.POST.get('currentSmoker')
+        temp['cigsPerDay'] = request.POST.get('cigsPerDay')
+        temp['BPMeds'] = request.POST.get('BPMeds')
+        temp['prevalentStroke'] = request.POST.get('prevalentStroke')
+        temp['prevalentHyp'] = request.POST.get('prevalentHyp')
+        temp['diabetes'] = request.POST.get('diabetes')
+        temp['totChol'] = request.POST.get('totChol')
+        temp['sysBP'] = request.POST.get('sysBP')
+        temp['diaBP'] = request.POST.get('diaBP')
+        temp['bmi'] = request.POST.get('bmi')
+        temp['glucose'] = request.POST.get('glucose')
+        fileObj = request.FILES['video']
+        print(temp)
+        input_list = list(temp.values())
+        fs = FileSystemStorage()
+        filePathName = fs.save(fileObj.name, fileObj)
+        filePathName = fs.url(filePathName)
+        print(filePathName)
+
+        testVid = '.'+filePathName
+
+        print(testVid)
+        file = Main(testVid)
+        bpm = round(file.capture_bpm())
+        print(bpm)
+        input_list.insert(-1, bpm)
+        print(input_list)
+        res = predict_from_arr(input_list)
+        print(res)
+
+        context = {
+            'heartRate': bpm,
+            'result': res
+        }
+    return render(request, 'result_HA.html', context)
+
 
 class homepage(TemplateView):
     template_name = 'index.html'
@@ -18,6 +81,7 @@ class homepage(TemplateView):
 
 def PCOD(request):
     return render(request, 'PCOD.html')
+
 
 def getPredictions(input_list):
     model = pickle.load(open('ML Models/PCOD_model.sav', 'rb'))
@@ -30,6 +94,7 @@ def getPredictions(input_list):
         return 'no'
     else:
         return 'error'
+
 
 def result_PCOD(request):
     temp = {}
@@ -64,12 +129,14 @@ def result_PCOD(request):
 
     return render(request, 'result_PCOD.html', context)
 
+
 def DocInput(request):
-    return render(request,'doctor_input.html')
+    return render(request, 'doctor_input.html')
+
 
 def DocRecomm(request):
     if request.method == 'POST':
-        temp={}
+        temp = {}
         temp['specialist'] = request.POST.get('specialist')
         temp['city'] = request.POST.get('city')
         city = temp['city']
@@ -79,12 +146,14 @@ def DocRecomm(request):
         try:
             url = 'https://www.practo.com/'+city+'/'+specialist
             html_text = requests.get(url).text
-            soup = BeautifulSoup(html_text,'lxml')
-            names = soup.find_all('h2',class_='doctor-name')
-            places = soup.find_all('div',class_='u-bold u-d-inlineblock u-valign--middle')
+            soup = BeautifulSoup(html_text, 'lxml')
+            names = soup.find_all('h2', class_='doctor-name')
+            places = soup.find_all(
+                'div', class_='u-bold u-d-inlineblock u-valign--middle')
             for i in range(len(names)):
-                val = {'SrNo':i+1,'name':names[i].text,'place':places[i].text}
+                val = {'SrNo': i+1,
+                       'name': names[i].text, 'place': places[i].text}
                 data.append(val)
         except:
             error = True
-        return render(request,'doctor.html', {'data':data})
+        return render(request, 'doctor.html', {'data': data})
