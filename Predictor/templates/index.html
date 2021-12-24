@@ -29,7 +29,7 @@
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="static/styles/fontawesome/css/fontawesome-all.css">
+    <!-- <link rel="stylesheet" href="static/styles/fontawesome/css/fontawesome-all.css"> -->
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
@@ -147,7 +147,7 @@
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <div class="icon"><a href="{% url 'HA' %}"><i class="fas fa-heartbeat"></i></a></div>
               <h4 class="title"><a href="{% url 'HA' %}">Heart Attack</a></h4>
               <p class="description">A blockage of blood flow to the heart muscle results in a heart attack</p>
             </div>
@@ -155,7 +155,7 @@
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="fas fa-ribbon"></i></div>
+              <div class="icon"><a href="{% url 'PCOD' %}"><i class="fas fa-ribbon"></i></a></div>
               <h4 class="title"><a href="{% url 'PCOD' %}">PCOD</a></h4>
               <p class="description">A hormonal disorder which is largely prevalent among women of reproductive age</p>
             </div>
@@ -163,7 +163,7 @@
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="fas fa-eye"></i></div>
+              <div class="icon"><a href=""><i class="fas fa-eye"></i></a></div>
               <h4 class="title"><a href="">Myopia</a></h4>
               <p class="description">Eye condition where close objects appear clearly, but far ones don't</p>
             </div>
@@ -171,7 +171,7 @@
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon"><i class="fas fa-dna"></i></div>
+              <div class="icon"><a href=""><i class="fas fa-dna"></i></a></div>
               <h4 class="title"><a href="">Colour Blindness</a></h4>
               <p class="description">A reduced ability to distinguish between certain colours</p>
             </div>
@@ -280,7 +280,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <div class="icon"><a href="{% url 'HA' %}"><i class="fas fa-heartbeat"></i></a></i></div>
               <h4><a href="{% url 'HA' %}">Heart Attack</a></h4>
               <p>The user has to answer some basic lifestyle questions a record a video of his face movements for 15 seconds.</p>
             </div>
@@ -288,7 +288,7 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-ribbon"></i></div>
+              <div class="icon"><a href="{% url 'PCOD' %}"><i class="fas fa-ribbon"></i></a></div>
               <h4><a href="{% url 'PCOD' %}">PCOD</a></h4>
               <p>The user will have to answer questions primarily based on their lifestyle and food intake habits.</p>
             </div>
@@ -296,7 +296,7 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-user-md"></i></div>
+              <div class="icon"><a href="{% url 'DoctorInput' %}"><i class="fas fa-user-md"></i></a></div>
               <h4><a href="{% url 'DoctorInput' %}">Doctor Recommendations</a></h4>
               <p>According to the predictions generated, the users would be provided with a recommendation of doctors based on their location</p>
             </div>
@@ -304,9 +304,9 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-dna"></i></div>
+              <div class="icon"><a href=""><i class="fas fa-dna"></i></a></div>
               <h4><a href="">Colour Blindness</a></h4>
-              <p>The user is given a set of 11 images consisting of Ishihara plates are shown each containing a 
+              <p>The user is given a set of 21 images consisting of Ishihara plates are shown each containing a 
                 numeric value. The user is asked to choose the value he sees or whether he is unable to see a 
                 value partially or not at all.</p>
             </div>
@@ -314,7 +314,7 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-eye"></i></div>
+              <div class="icon"><a href=""><i class="fas fa-eye"></i></a></div>
               <h4><a href="">Myopia</a></h4>
               <p>The user will have to hold the phone in front of him. The font of the Snellen’s chart will vary with respect to the distance between the camera 
                 and the user. Now, the user has to read out the letters he can see.</p>
@@ -323,7 +323,7 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-notes-medical"></i></div>
+              <div class="icon"><a href=""><i class="fas fa-notes-medical"></i></a></div>
               <h4><a href="">Medical Blog</a></h4>
               <p>Users will be able to access health and nutrition blogs based on their medical history</p>
             </div>
@@ -593,7 +593,7 @@
         <div class="faq-list">
           <ul>
             <li data-aos="fade-up">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Are the predictions 100% accurate? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1" class="collapsed">Are the predictions 100% accurate? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
                 <p>
                   No, they are not 100% accurate. They are accurate enough to indicate if you are at a higher risk.
@@ -602,24 +602,24 @@
             </li>
 
             <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">How are the predictions made? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  We have trained and tested the data using various machine laerning techniques and the one with the best accuracy has been chosen.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">How do we contact the doctors? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                  The doctor recommendation module will list all the doctors based on your location along with their contact details. To book an appointment you can contact them at your convinience.
                 </p>
               </div>
             </li>
 
-            <li data-aos="fade-up" data-aos-delay="300">
+            <!-- <li data-aos="fade-up" data-aos-delay="300">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                 <p>
@@ -635,7 +635,7 @@
                   Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
                 </p>
               </div>
-            </li>
+            </li> -->
 
           </ul>
         </div>
