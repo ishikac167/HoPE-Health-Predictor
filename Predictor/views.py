@@ -21,6 +21,12 @@ with open(baseUrl + 'heart_attack_pred_model.pkl', 'rb') as file:
     cat_model = pickle.load(file)
 
 
+def convert_time(time):
+    h = int(time[:2])
+    m = int(time[3:])
+    return float(h + (m/60))
+
+
 def predict_from_arr(arr):
     pred = cat_model.predict(arr)
     return(pred)
@@ -110,8 +116,8 @@ def result_PCOD(request):
     temp['Q10'] = int(request.POST.get('Q10'))
     temp['Q11'] = request.POST.get('Q11')
     temp['Q12'] = int(request.POST.get('Q12'))
-    temp['Q13'] = float(request.POST.get('Q13'))
-    temp['Q14'] = float(request.POST.get('Q14'))
+    temp['Q13'] = convert_time(request.POST.get('Q13'))
+    temp['Q14'] = convert_time(request.POST.get('Q14'))
     temp['Q15'] = int(request.POST.get('Q15'))
     temp['Q16'] = int(request.POST.get('Q16'))
     temp['Q17'] = int(request.POST.get('Q17'))
