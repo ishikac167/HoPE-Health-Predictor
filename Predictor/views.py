@@ -12,8 +12,8 @@ from .main import Main
 # def Signup(request):
 #     return render(request, 'signup.html')
 
-# def Login(request):
-#     return render(request, 'login.html')
+def Login(request):
+    return render(request, 'login.html')
 
 baseUrl = settings.MEDIA_ROOT_URL + settings.MEDIA_URL
 
