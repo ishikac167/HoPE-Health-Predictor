@@ -113,7 +113,7 @@ input {
     </style>
   </head>
   <body>
-    <header id="header">
+    <header id="header" style="margin-bottom: 20px;">
         <div class="container d-flex align-items-center">
     
           <h1 class="logo me-auto"><a style="font-family: Poppins, sans-serif;" href="{% url 'home' %}">HoPE</a></h1>
@@ -134,16 +134,23 @@ input {
 
 
         <center>
-          <strong style="font-size: 30px">Enter the City and Specialist</strong> 
+          <center><strong style="font-size: 30px;">Search the Nearest Doctors</strong></center>
+        <center><strong style="font-size: 15px;">Discover the best doctors in the cities nearest to you</strong></center> 
     <div class="container">
-      <form id="contact" method="post" enctype="multipart/form-data" action="{% url 'Doctor' %} ">
+      <form id="contact" method="post" enctype="multipart/form-data" action="{% url 'Doctor' %} " class="php-email-form">
         {% csrf_token %}
         <fieldset>
-          <input placeholder="Enter City Name" type="text" tabindex="1" name="city" required value={{temp.city}}>
-          <input placeholder="Enter Specialist" type="text" tabindex="2" name="specialist" required value={{temp.specialist}}>
+          <label for="city">City</label>
+          <input type="text" tabindex="1" name="city" required value={{temp.city}}>
+          <label for="specialist">Specialist</label>
+          <input type="text" tabindex="2" name="specialist" required value={{temp.specialist}}>
+          <button class="appointment-btn scrollto" name="submit" type="submit" id="contact-submit" data-submit="...Sending"><span class="d-none d-md-inline">Search</span></button>
+          <!-- <button class="appointment-btn scrollto" name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Submit">Submit</button> -->
         </fieldset>
+        <hr>
         <fieldset>
-          <button class="appointment-btn scrollto" name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Submit">Submit</button>
+          <img style="width: 300px; height: 300px" src="{% static 'img/search2.gif' %}">
+          <!-- <button class="appointment-btn scrollto" name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Submit">Submit</button> -->
         </fieldset>
       </form>
     </div>
