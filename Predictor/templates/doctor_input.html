@@ -135,7 +135,7 @@ input {
 
         <center>
           <center><strong style="font-size: 30px;">Search the Nearest Doctors</strong></center>
-        <center><strong style="font-size: 15px;">Discover the best doctors in the cities nearest to you</strong></center> 
+        <center>Discover the best doctors in the cities nearest to you</center> 
     <div class="container">
       <form id="contact" method="post" enctype="multipart/form-data" action="{% url 'Doctor' %} " class="php-email-form">
         {% csrf_token %}
@@ -144,7 +144,7 @@ input {
           <input type="text" tabindex="1" name="city" required value={{temp.city}}>
           <label for="specialist">Specialist</label>
           <input type="text" tabindex="2" name="specialist" required value={{temp.specialist}}>
-          <button class="appointment-btn scrollto" name="submit" type="submit" id="contact-submit" data-submit="...Sending"><span class="d-none d-md-inline">Search</span></button>
+          <button style="border: none;" class="appointment-btn scrollto" name="submit" type="submit" id="contact-submit" data-submit="...Sending"><span class="d-none d-md-inline">Search</span></button>
           <!-- <button class="appointment-btn scrollto" name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Submit">Submit</button> -->
         </fieldset>
         <hr>
