@@ -167,3 +167,6 @@ def DocRecomm(request):
 
 def health_journal(request):
     return render(request, 'journal.html')
+
+def dashboard(request):
+    return render(request, 'dash.html')
