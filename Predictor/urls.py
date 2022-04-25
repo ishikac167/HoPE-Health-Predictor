@@ -13,5 +13,6 @@ urlpatterns = [
     path('HA/', views.HA, name='HA'),
     path('result_HA/', views.result_HA, name='result_HA'),
     # path('signup/', views.Signup, name='signup'),
-    path('login/', views.Login, name='login')
+    path('login/', views.Login, name='login'),
+    path('test/', views.test, name='test')
 ]

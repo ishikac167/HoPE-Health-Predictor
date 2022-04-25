@@ -7,13 +7,28 @@ import cv2
 from django.core.files.storage import FileSystemStorage
 from django.conf import settings
 from .main import Main
+from .firebase import FirebaseClient
+#from rest_framework import viewsets, status
+#from rest_framework.response import Response
 
 # Create your views here.
 # def Signup(request):
 #     return render(request, 'signup.html')
+fb_client = FirebaseClient()
+
 
 def Login(request):
     return render(request, 'login.html')
+
+
+def test(request):
+    if request.method == "POST":
+        data = {}
+        data['username'] = request.POST.get('username')
+        data['password'] = request.POST.get('password')
+        fb_client.create(data)
+    return render(request, 'test.html')
+
 
 baseUrl = settings.MEDIA_ROOT_URL + settings.MEDIA_URL
 

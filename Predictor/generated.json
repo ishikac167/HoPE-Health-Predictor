@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "health-predictor-246dc",
+  "private_key_id": "ed945b2b80e797be41a88d5c34eeedb89801245b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCmHnNmezXrI7gm\nnf40T2H5mTS17qFPzUmkkItJPgoB520DqIM0n7uW7zFL0WFDgqoMRdMjaHnMq5Ef\necjtTYhlueuLtW6CioCYQ4fnBkwswvClgX3iceAG66uVFl+7J/no86nRtfTLT/WF\ns2UC6Dpfc3amCmxkBr7KlWvwrjeMx21WHFU2AFAvFg0qsZ3u2hci8x4F7MLVcna3\nPSOqpfrC8DeYqYlnM/ArToxHge7/LcFvH3i3VJEuYdnS95IAlXjCvMIR90cUP4N4\nT99qhTllZudLHgPeogn2gecECH3VPHXmewZqzZnBtHz1ur1dxdP2EL+/mH/tLs5V\ntLCU2ksfAgMBAAECggEACQmwrzhJrEvHm38OplUhuEa3/qRhBzDc4aTLlZlYFtc6\n4yJ3IPtsmIwJW13YGnT9c3V8ROAZefBlRBhU8Jqk4epfmlZHEOsgKMIwnq0eow2b\nS799bdiF0idesNnRLSModNG5wSMfkmaWeq1SWmCJuUlUgNKIWyWfmiRonv7OuH+U\nTIMBQMWePAdcZXT0QM/xtIo0ES7A/yEyIXPBVpQhZLN5yRWkh3LpJB7sR9jyf7mz\nRoEQLOknlxc6cHqnP/zeATsnueoCE1aroF9O5DsyTuxE2Vmz3vrMwX77CCURCVxy\n9BpuormjfcpdeNd5LNGXzH65c/+TF36xsDYkHaZLoQKBgQDUFd2D6rQVw5iaf68T\nRmGFDX/ZxRgbj7nX1hCMl5HC/6olnz6Qz+HsuMoIyhf0oQ4NC1RtL9A3m247yjtS\nPxT3tmSOlhj2CSrVWlaBwXPOEhIwUW9kTqgbV/vCvJ4X5Ggkj3f7Gc92MvM65+JJ\n5ETru1g5lzOlITJeqXUr6KkDBQKBgQDIhAOzyYMYWx7f+ILoNlP5b90jYrBPqNDw\n8LgixJIuSIY40cT5mqJw/kJRCHClBjrUXjKHG8h+FjlowL6uTmNpk+3fYCx9dfnu\nWAFYWg5dchrVeS7Z/CtnrT85xBsbU77QPNXuZkhN32+/150lOTRMXaJT/dD12/9z\n8cKRUu720wKBgF0kVSqQMxKz2htQJCWE7WMvsIyFQLcqAeZGfvIfxsYq3iCztRiI\nE6KQ7Tm695ZZ/P/BkAx7ySgCvQDJKhBO3/iCQ9tTFBdJo2Qbzo4h1agUy6Qov5D/\n8lg/5bN6frvjddFIqNrAVRqF+chO+lSVSad1maOBQg8tax+jsG/eOAu5AoGALdwr\nsJn9Frv4csc2wX9zc1BHZolyw7VbnE+h/amxuU4zDJnFkETytB8i8b+Za9Th7aJh\nsg8DqvrQRIoY0mrxR7tioz0uz78E26NbI2btdCfdxUdDFO4cy0iPdlnIzVY5BQ10\n7GKOVOkueNUKhvHvaSvdLZKWkTSw10bK9kvehasCgYEA0FZnHOLGvZkxdjzRcIxx\nn3KrdVrwwvgIWDoJGXGc/8/ACw/yXBq4KNqZj5OhOqYYIPkBUEcqwn/3vitPW7Yp\nast4hZWpKdHwagszS7argcTKzSpbBZ8zUGDj3OVsw3Gh96IgBAPKHFmAGTDZz9wD\nYaTKIU64AvYL9kt5PpRenYs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-ljx8y@health-predictor-246dc.iam.gserviceaccount.com",
+  "client_id": "113736042015230924082",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-ljx8y%40health-predictor-246dc.iam.gserviceaccount.com"
+}
