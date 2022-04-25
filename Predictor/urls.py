@@ -14,7 +14,7 @@ urlpatterns = [
     path('result_HA/', views.result_HA, name='result_HA'),
     # path('signup/', views.Signup, name='signup'),
     path('login/', views.Login, name='login'),
-    path('test/', views.test, name='test')
+    path('test/', views.test, name='test'),
     path('journal/', views.health_journal, name='journal'),
     path('dashboard/', views.dashboard, name='dashboard')
 ]
