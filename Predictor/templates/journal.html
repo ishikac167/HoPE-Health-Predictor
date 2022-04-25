@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <!-- Favicons -->
+    <link href="{% static 'img/LOGO.png' %}" rel="icon">
+    <link href="{% static 'img/HoPE.png' %}" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+      <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+      <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+      <!-- <link rel="stylesheet" href="static/styles/fontawesome/css/fontawesome-all.css"> -->
+  
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/journal.css' %}" rel="stylesheet">
+
+    <title>Health Journal</title>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container d-flex align-items-center">
+    
+          <h1 class="logo me-auto"><a style="font-family: Poppins, sans-serif;" href="{% url 'home' %}">HoPE</a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html" class="logo me-auto"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
+          <a href="{% url 'DoctorInput' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Back</a>
+          <a href="{% url 'home' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Home Page</span></a>
+        
+    
+        </div>
+      </header><!-- End Header -->
+    
+      <section>
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+              <div class="card card-registration">
+                <div class="row g-0 justify-content-center">
+                  <!-- <div class="col-xl-6 d-none d-xl-block">
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                      alt="Sample photo"
+                      class="img-fluid"
+                      style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;"
+                    />
+                  </div> -->
+            
+                  
+                  <div class="col-xl-8">
+                    <div class="card-body p-md-5 text-black">
+                      <h3>Hi, User</h3>
+                      <h5>Please enter your details</h5>
+                      <hr>
+                      <!-- <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                            <label class="form-label" for="form3Example1m">First name</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                            <label class="form-label" for="form3Example1n">Last name</label>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" id="form3Example1m1" class="form-control form-control-lg" />
+                            <label class="form-label" for="form3Example1m1">Mother's name</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" id="form3Example1n1" class="form-control form-control-lg" />
+                            <label class="form-label" for="form3Example1n1">Father's name</label>
+                          </div>
+                        </div>
+                      </div> -->
+      
+                      <!-- <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example8">Address</label>
+                        <input type="text" id="form3Example8" class="form-control form-control-lg" />
+                      </div> -->
+      
+                      <div class="d-md-flex justify-content-start align-items-center mb-4">
+
+                        <div class="form-outline">
+                          <label class="form-label" for="form3Example9">Gender:</label>
+      
+                        <div class="form-check mb-0 me-4">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="femaleGender"
+                            value="option1"
+                          />
+                          <label class="form-check-label" for="femaleGender">Female</label>
+                        </div>
+      
+                        <div class="form-check mb-0 me-4">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="maleGender"
+                            value="option2"
+                          />
+                          <label class="form-check-label" for="maleGender">Male</label>
+                        </div>
+      
+                        <div class="form-check mb-0">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="otherGender"
+                            value="option3"
+                          />
+                          <label class="form-check-label" for="otherGender">Other</label>
+                        </div>
+
+                        </div>
+                      </div>
+
+                      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example9">Date of Birth</label>
+                        <input type="date" id="form3Example9" class="form-control form-control-lg" />
+                      </div>
+      
+                      <!-- <div class="row">
+                        <div class="col-md-6 mb-4">
+      
+                          <select class="select">
+                            <option value="1">State</option>
+                            <option value="2">Option 1</option>
+                            <option value="3">Option 2</option>
+                            <option value="4">Option 3</option>
+                          </select>
+      
+                        </div>
+                        <div class="col-md-6 mb-4">
+      
+                          <select class="select">
+                            <option value="1">City</option>
+                            <option value="2">Option 1</option>
+                            <option value="3">Option 2</option>
+                            <option value="4">Option 3</option>
+                          </select>
+      
+                        </div>
+                      </div> -->
+    
+      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example90">Height</label>
+                        <input type="text" id="form3Example90" class="form-control form-control-lg" />
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example90">Weight</label>
+                        <input type="text" id="form3Example90" class="form-control form-control-lg" />
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example90">Blood Group</label>
+                        <input type="text" id="form3Example90" class="form-control form-control-lg" />
+                      </div>
+
+                      <div id="myDIV" class="header">
+                        <label class="form-label" for="form3Example90">Medical Ailments/Allergies</label>
+                        <div class="row"> 
+                          <div class="col-sm-11"><input type="text" id="myInput" class="form-control form-control-lg"></div>
+                          <div class="col-sm-1"><span onclick="newElement()" class="addBtn"><img style="size: 15px; height: 40px; width: 40px;" src="{% static 'img/plus.png' %}"></span>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      
+                      <ol id="myUL" style="font-size: large;">
+                        <li>Hit the gym</li>
+                        <li class="checked">Pay bills</li>
+                        <li>Meet George</li>
+                        <li>Buy eggs</li>
+                        <li>Read a book</li>
+
+                      </ol>
+
+                      <div id="myDIV" class="header">
+                        <label class="form-label" for="form3Example90">Current Medications</label>
+                        <div class="row"> 
+                          <div class="col-sm-11"><input type="text" id="myInput" class="form-control form-control-lg"></div>
+                          <div class="col-sm-1"><span onclick="newMedication()" class="addBtn"><img style="size: 15px; height: 40px; width: 40px;" src="{% static 'img/plus.png' %}"></span>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      
+                      <ol id="myUL" style="font-size: large;">
+                        <li>Hit the gym</li>
+                        <li class="checked">Pay bills</li>
+                        <li>Meet George</li>
+                        <li>Buy eggs</li>
+                        <li>Read a book</li>
+          
+                      </ol>
+      
+                      <div class="d-flex justify-content-end pt-3">
+                        <button type="button" style="border: none;" class="appointment-btn scrollto">Reset all</button>
+                        <button type="button" style="border: none;" class="appointment-btn scrollto">Submit form</button>
+                      </div>
+      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <script>
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByTagName("LI");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt1 = document.createTextNode("         ");
+      var txt = document.createElement("IMG");
+      txt.src = "{% static 'img/minus.png' %}";
+      txt.style.height = "18px";
+      txt.style.width = "18px";
+      span.className = "close";
+      span.appendChild(txt1);
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+    
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("close");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+    
+    // Add a "checked" symbol when clicking on a list item
+    // var list = document.querySelector('ul');
+    // list.addEventListener('click', function(ev) {
+    //   if (ev.target.tagName === 'LI') {
+    //     ev.target.classList.toggle('checked');
+    //   }
+    // }, false);
+    
+    // Create a new list item when clicking on the "Add" button
+    function newElement() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("myUL").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+    
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      li.appendChild(span);
+    
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+
+<script>
+  // Create a "close" button and append it to each list item
+  var myNodelist1 = document.getElementsByTagName("LI");
+  var i;
+  for (i = 0; i < myNodelist.length; i++) {
+    var span1 = document.createElement("SPAN");
+    var txt11 = document.createTextNode("         ");
+    var txt1 = document.createElement("IMG");
+    txt1.src = "{% static 'img/minus.png' %}";
+    txt1.style.height = "18px";
+    txt1.style.width = "18px";
+    span1.className = "close";
+    span1.appendChild(txt11);
+    span1.appendChild(txt1);
+    myNodelist1[i].appendChild(span);
+  }
+  
+  // Click on a close button to hide the current list item
+  var close1 = document.getElementsByClassName("close");
+  var i;
+  for (i = 0; i < close1.length; i++) {
+    close1[i].onclick = function() {
+      var div1 = this.parentElement;
+      div1.style.display = "none";
+    }
+  }
+  
+  // Add a "checked" symbol when clicking on a list item
+  // var list = document.querySelector('ul');
+  // list.addEventListener('click', function(ev) {
+  //   if (ev.target.tagName === 'LI') {
+  //     ev.target.classList.toggle('checked');
+  //   }
+  // }, false);
+  
+  // Create a new list item when clicking on the "Add" button
+  function newMedication() {
+    var li1 = document.createElement("li");
+    var inputValue1 = document.getElementById("myInput").value;
+    var t1 = document.createTextNode(inputValue);
+    li1.appendChild(t1);
+    if (inputValue === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("myUL").appendChild(li1);
+    }
+    document.getElementById("myInput").value = "";
+  
+    var span1 = document.createElement("SPAN");
+    var txt1 = document.createTextNode("\u00D7");
+    span1.className = "close";
+    span1.appendChild(txt1);
+    li1.appendChild(span1);
+  
+    for (i = 0; i < close1.length; i++) {
+      close1[i].onclick = function() {
+        var div1 = this.parentElement;
+        div1.style.display = "none";
+      }
+    }
+  }
+  </script>
+    
+
+  <!-- <script
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      data-auto-a11y="true"
+    ></script> -->
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

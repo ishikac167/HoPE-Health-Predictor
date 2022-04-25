@@ -178,3 +178,10 @@ def DocRecomm(request):
         except:
             error = True
         return render(request, 'doctor.html', {'data': data})
+
+
+def health_journal(request):
+    return render(request, 'journal.html')
+
+def dashboard(request):
+    return render(request, 'dash.html')
