@@ -48,24 +48,27 @@
       </header><!-- End Header -->
     
       <section>
-        <div class="container py-5 h-100">
+        <div class="container">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col">
-              <div class="card card-registration my-4">
-                <div class="row g-0">
-                  <div class="col-xl-6 d-none d-xl-block">
+              <div class="card card-registration">
+                <div class="row g-0 justify-content-center">
+                  <!-- <div class="col-xl-6 d-none d-xl-block">
                     <img
                       src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
                       alt="Sample photo"
                       class="img-fluid"
                       style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;"
                     />
-                  </div>
-                  <div class="col-xl-6">
+                  </div> -->
+            
+                  
+                  <div class="col-xl-8">
                     <div class="card-body p-md-5 text-black">
-                      <h3 class="mb-5 text-uppercase">User health Journal</h3>
-      
-                      <div class="row">
+                      <h3>Hi, User</h3>
+                      <h5>Please enter your details</h5>
+                      <hr>
+                      <!-- <div class="row">
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
                             <input type="text" id="form3Example1m" class="form-control form-control-lg" />
@@ -93,18 +96,19 @@
                             <label class="form-label" for="form3Example1n1">Father's name</label>
                           </div>
                         </div>
-                      </div>
+                      </div> -->
       
-                      <div class="form-outline mb-4">
-                        <input type="text" id="form3Example8" class="form-control form-control-lg" />
+                      <!-- <div class="form-outline mb-4">
                         <label class="form-label" for="form3Example8">Address</label>
-                      </div>
+                        <input type="text" id="form3Example8" class="form-control form-control-lg" />
+                      </div> -->
       
-                      <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                      <div class="d-md-flex justify-content-start align-items-center mb-4">
+
+                        <div class="form-outline">
+                          <label class="form-label" for="form3Example9">Gender:</label>
       
-                        <h6 class="mb-0 me-4">Gender: </h6>
-      
-                        <div class="form-check form-check-inline mb-0 me-4">
+                        <div class="form-check mb-0 me-4">
                           <input
                             class="form-check-input"
                             type="radio"
@@ -115,7 +119,7 @@
                           <label class="form-check-label" for="femaleGender">Female</label>
                         </div>
       
-                        <div class="form-check form-check-inline mb-0 me-4">
+                        <div class="form-check mb-0 me-4">
                           <input
                             class="form-check-input"
                             type="radio"
@@ -126,7 +130,7 @@
                           <label class="form-check-label" for="maleGender">Male</label>
                         </div>
       
-                        <div class="form-check form-check-inline mb-0">
+                        <div class="form-check mb-0">
                           <input
                             class="form-check-input"
                             type="radio"
@@ -136,10 +140,17 @@
                           />
                           <label class="form-check-label" for="otherGender">Other</label>
                         </div>
-      
+
+                        </div>
+                      </div>
+
+                      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example9">Date of Birth</label>
+                        <input type="date" id="form3Example9" class="form-control form-control-lg" />
                       </div>
       
-                      <div class="row">
+                      <!-- <div class="row">
                         <div class="col-md-6 mb-4">
       
                           <select class="select">
@@ -160,27 +171,61 @@
                           </select>
       
                         </div>
-                      </div>
+                      </div> -->
+    
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="form3Example9" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example9">DOB</label>
-                      </div>
-      
-                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example90">Height</label>
                         <input type="text" id="form3Example90" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example90">Pincode</label>
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="form3Example99" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example99">Course</label>
+                        <label class="form-label" for="form3Example90">Weight</label>
+                        <input type="text" id="form3Example90" class="form-control form-control-lg" />
                       </div>
       
                       <div class="form-outline mb-4">
-                        <input type="text" id="form3Example97" class="form-control form-control-lg" />
-                        <label class="form-label" for="form3Example97">Email ID</label>
+                        <label class="form-label" for="form3Example90">Blood Group</label>
+                        <input type="text" id="form3Example90" class="form-control form-control-lg" />
                       </div>
+
+                      <div id="myDIV" class="header">
+                        <label class="form-label" for="form3Example90">Medical Ailments/Allergies</label>
+                        <div class="row"> 
+                          <div class="col-sm-11"><input type="text" id="myInput" class="form-control form-control-lg"></div>
+                          <div class="col-sm-1"><span onclick="newElement()" class="addBtn"><img style="size: 15px; height: 40px; width: 40px;" src="{% static 'img/plus.png' %}"></span>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      
+                      <ol id="myUL" style="font-size: large;">
+                        <li>Hit the gym</li>
+                        <li class="checked">Pay bills</li>
+                        <li>Meet George</li>
+                        <li>Buy eggs</li>
+                        <li>Read a book</li>
+
+                      </ol>
+
+                      <div id="myDIV" class="header">
+                        <label class="form-label" for="form3Example90">Current Medications</label>
+                        <div class="row"> 
+                          <div class="col-sm-11"><input type="text" id="myInput" class="form-control form-control-lg"></div>
+                          <div class="col-sm-1"><span onclick="newMedication()" class="addBtn"><img style="size: 15px; height: 40px; width: 40px;" src="{% static 'img/plus.png' %}"></span>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      
+                      <ol id="myUL" style="font-size: large;">
+                        <li>Hit the gym</li>
+                        <li class="checked">Pay bills</li>
+                        <li>Meet George</li>
+                        <li>Buy eggs</li>
+                        <li>Read a book</li>
+          
+                      </ol>
       
                       <div class="d-flex justify-content-end pt-3">
                         <button type="button" style="border: none;" class="appointment-btn scrollto">Reset all</button>
@@ -203,6 +248,133 @@
   <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
   <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
   <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <script>
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByTagName("LI");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt1 = document.createTextNode("         ");
+      var txt = document.createElement("IMG");
+      txt.src = "{% static 'img/minus.png' %}";
+      txt.style.height = "18px";
+      txt.style.width = "18px";
+      span.className = "close";
+      span.appendChild(txt1);
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+    
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("close");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+    
+    // Add a "checked" symbol when clicking on a list item
+    // var list = document.querySelector('ul');
+    // list.addEventListener('click', function(ev) {
+    //   if (ev.target.tagName === 'LI') {
+    //     ev.target.classList.toggle('checked');
+    //   }
+    // }, false);
+    
+    // Create a new list item when clicking on the "Add" button
+    function newElement() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("myUL").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+    
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      li.appendChild(span);
+    
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+
+<script>
+  // Create a "close" button and append it to each list item
+  var myNodelist1 = document.getElementsByTagName("LI");
+  var i;
+  for (i = 0; i < myNodelist.length; i++) {
+    var span1 = document.createElement("SPAN");
+    var txt11 = document.createTextNode("         ");
+    var txt1 = document.createElement("IMG");
+    txt1.src = "{% static 'img/minus.png' %}";
+    txt1.style.height = "18px";
+    txt1.style.width = "18px";
+    span1.className = "close";
+    span1.appendChild(txt11);
+    span1.appendChild(txt1);
+    myNodelist1[i].appendChild(span);
+  }
+  
+  // Click on a close button to hide the current list item
+  var close1 = document.getElementsByClassName("close");
+  var i;
+  for (i = 0; i < close1.length; i++) {
+    close1[i].onclick = function() {
+      var div1 = this.parentElement;
+      div1.style.display = "none";
+    }
+  }
+  
+  // Add a "checked" symbol when clicking on a list item
+  // var list = document.querySelector('ul');
+  // list.addEventListener('click', function(ev) {
+  //   if (ev.target.tagName === 'LI') {
+  //     ev.target.classList.toggle('checked');
+  //   }
+  // }, false);
+  
+  // Create a new list item when clicking on the "Add" button
+  function newMedication() {
+    var li1 = document.createElement("li");
+    var inputValue1 = document.getElementById("myInput").value;
+    var t1 = document.createTextNode(inputValue);
+    li1.appendChild(t1);
+    if (inputValue === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("myUL").appendChild(li1);
+    }
+    document.getElementById("myInput").value = "";
+  
+    var span1 = document.createElement("SPAN");
+    var txt1 = document.createTextNode("\u00D7");
+    span1.className = "close";
+    span1.appendChild(txt1);
+    li1.appendChild(span1);
+  
+    for (i = 0; i < close1.length; i++) {
+      close1[i].onclick = function() {
+        var div1 = this.parentElement;
+        div1.style.display = "none";
+      }
+    }
+  }
+  </script>
+    
 
   <!-- <script
       src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
