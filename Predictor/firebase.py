@@ -19,10 +19,10 @@ class FirebaseClient:
         self._db = firestore.client()
         self._collection = self._db.collection(u'users')
 
-    def create(self, data):
+    def create(self, data, userid):
         """Create todo in firestore database"""
         doc_ref = self._collection
-        doc_ref.add(data)
+        doc_ref.document(userid).set(data)
 
     def update(self, id, data):
         """Update todo on firestore database using document id"""

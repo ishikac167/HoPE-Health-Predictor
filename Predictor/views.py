@@ -8,6 +8,7 @@ from django.core.files.storage import FileSystemStorage
 from django.conf import settings
 from .main import Main
 from .firebase import FirebaseClient
+from firebase_admin import auth
 #from rest_framework import viewsets, status
 #from rest_framework.response import Response
 
@@ -16,18 +17,68 @@ from .firebase import FirebaseClient
 #     return render(request, 'signup.html')
 fb_client = FirebaseClient()
 
+user_details = {}
+
 
 def Login(request):
     return render(request, 'login.html')
 
 
-def test(request):
+def loginuser(request):
+    if request.method == "POST":
+        user = auth.get_user_by_email(request.POST.get('email'))
+        print(user.uid)
+        global user_details
+        user_details = fb_client.get_by_id(user.uid)
+        print(user_details)
+    return render(request, 'index.html', user_details)
+
+
+def dashboard(request, user_id):
+    print(user_id)
+    user_details = fb_client.get_by_id(user_id)
+
+    return render(request, 'dash.html', user_details)
+
+
+def updateuser(request, user_id):
+    print(user_id)
+    user_details = fb_client.get_by_id(user_id)
     if request.method == "POST":
         data = {}
-        data['username'] = request.POST.get('username')
-        data['password'] = request.POST.get('password')
-        fb_client.create(data)
-    return render(request, 'test.html')
+        data['name'] = request.POST.get('name')
+        data['bloodgroup'] = request.POST.get('bloodgroup')
+        data['dob'] = request.POST.get('dob')
+        data['gender'] = request.POST.get('gender')
+        data['weight'] = request.POST.get('weight')
+        data['height'] = request.POST.get('height')
+        fb_client.update(user_id, data)
+    return render(request, "dash.html", user_details)
+
+
+def signup(request):
+    if request.method == "POST":
+        data = {}
+        data['name'] = request.POST.get('name')
+        data['email'] = request.POST.get('sign-up-email')
+        data['password'] = request.POST.get('sign-up-password')
+        data['ailments'] = []
+        data['bloodgroup'] = ""
+        data['chd'] = []
+        data['colorb'] = []
+        data['dob'] = ''
+        data['gender'] = ''
+        data['lastTestTaken'] = ''
+        data['myopia'] = []
+        data['pcod'] = []
+        data['urlAvatar'] = ''
+        data['weight'] = ''
+
+        user = auth.create_user(
+            email=data['email'], password=data['password'], display_name=data['name'])
+
+        fb_client.create(data, user.uid)
+    return render(request, 'login.html')
 
 
 baseUrl = settings.MEDIA_ROOT_URL + settings.MEDIA_URL
@@ -182,6 +233,3 @@ def DocRecomm(request):
 
 def health_journal(request):
     return render(request, 'journal.html')
-
-def dashboard(request):
-    return render(request, 'dash.html')

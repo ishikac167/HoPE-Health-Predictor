@@ -14,7 +14,9 @@ urlpatterns = [
     path('result_HA/', views.result_HA, name='result_HA'),
     # path('signup/', views.Signup, name='signup'),
     path('login/', views.Login, name='login'),
-    path('test/', views.test, name='test'),
+    path('loginuser/', views.loginuser, name='loginuser'),
+    path('signup/', views.signup, name='signup'),
     path('journal/', views.health_journal, name='journal'),
-    path('dashboard/', views.dashboard, name='dashboard')
+    path('updateuser/<slug:user_id>', views.updateuser, name='updateuser'),
+    path('dashboard/<slug:user_id>', views.dashboard, name='dashboard')
 ]
