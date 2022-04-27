@@ -33,7 +33,7 @@
                     <div class="col-lg-10 mx-auto login-desk">
                        <div class="row">
                             <div class="col-md-7 detail-box">
-                                <img class="logo" src="{% static 'images/HoPE.png' %}" alt=""> 
+                                <a href="{% url 'home' %}"><img class="logo" src="{% static 'images/HoPE.png' %}" alt=""> </a>
                                 <div class="detailsh">
                                      <img class="help" src="{% static 'images/Hope Login (4).png' %}" alt="">
                                     <h2><b>Welcome to HoPE</b></h2>
@@ -44,7 +44,7 @@
                                  <h4>Welcome Back</h4>                   
                                  <p>Sign In to your Account or <a href="">Create Account</a></p>
                                  <div class="login-det">
-                                <form method="post" enctype="multipart/form-data" action="{% url 'test' %}">
+                                <form method="post" enctype="multipart/form-data" action="{% url 'journal' %}">
                                 {% csrf_token %}
                                     <div class="form-row">
                                          <label for="">Username</label>
@@ -65,7 +65,7 @@
                                                     <i class="fas fa-lock"></i>
                                                 </span>
                                               </div>
-                                              <input type="text" name="password" class="form-control" placeholder="Enter Password" aria-label="Username" aria-describedby="basic-addon1">
+                                              <input type="password" name="password" class="form-control" placeholder="Enter Password" aria-label="Username" aria-describedby="basic-addon1">
                                          </div>
                                     </div>
                                 

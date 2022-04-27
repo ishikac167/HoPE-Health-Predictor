@@ -40,7 +40,7 @@
           <h1 class="logo me-auto"><a style="font-family: Poppins, sans-serif;" href="{% url 'home' %}">HoPE</a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html" class="logo me-auto"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
-          <a href="{% url 'DoctorInput' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Back</a>
+          <a href="{% url 'login' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Back</a>
           <a href="{% url 'home' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Home Page</span></a>
         
     
@@ -199,14 +199,14 @@
                         
                       </div>
                       
-                      <ol id="myUL" style="font-size: large;">
+                      <!-- <ol id="myUL" style="font-size: large;">
                         <li>Hit the gym</li>
                         <li class="checked">Pay bills</li>
                         <li>Meet George</li>
                         <li>Buy eggs</li>
                         <li>Read a book</li>
 
-                      </ol>
+                      </ol> -->
 
                       <div id="myDIV" class="header">
                         <label class="form-label" for="form3Example90">Current Medications</label>
@@ -218,18 +218,18 @@
                         
                       </div>
                       
-                      <ol id="myUL" style="font-size: large;">
+                      <!-- <ol id="myUL" style="font-size: large;">
                         <li>Hit the gym</li>
                         <li class="checked">Pay bills</li>
                         <li>Meet George</li>
                         <li>Buy eggs</li>
                         <li>Read a book</li>
           
-                      </ol>
+                      </ol> -->
       
                       <div class="d-flex justify-content-end pt-3">
                         <button type="button" style="border: none;" class="appointment-btn scrollto">Reset all</button>
-                        <button type="button" style="border: none;" class="appointment-btn scrollto">Submit form</button>
+                        <a href="{% url 'home' %}"><button type="button" style="border: none;" class="appointment-btn scrollto">Submit form</button></a>
                       </div>
       
                     </div>
