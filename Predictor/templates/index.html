@@ -79,7 +79,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
       {% if id %}
-      <a style="color:blue" href="{% url 'dashboard' user_id=id %}"> <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></a>
+      <a style="color:#1977cc" href="{% url 'dashboard' user_id=id %}"> <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></a>
       {% else %}
       <a href="{% url 'login' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Login /</span> Signup</a>
       {% endif %}

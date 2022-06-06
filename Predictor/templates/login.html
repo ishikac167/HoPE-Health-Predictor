@@ -1,102 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-    <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>HoPE - Login</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  {% load static %}
-  <!-- Favicons -->
-  <link href="{% static 'img/LOGO.png' %}" rel="icon">
-  <link href="{% static 'img/HoPE.png' %}" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <title>HoPE - Login</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css2/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css2/all.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css2/animate.css' %}">
-    <link rel="stylesheet" href="{% static 'plugins/slider/css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'plugins/slider/css/owl.theme.default.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css2/login.css' %}" />
+    <!-- Favicons -->
+    <link href="{% static 'img/LOGO.png' %}" rel="icon" />
+    <link href="{% static 'img/HoPE.png' %}" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap"
+      rel="stylesheet"
+    />
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css2/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css2/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css2/animate.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'plugins/slider/css/owl.carousel.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'plugins/slider/css/owl.theme.default.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css2/login.css' %}"
+    />
 
     <style>
-        .fa-google {
-  background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
+      .fa-google {
+        background: conic-gradient(
+            from -45deg,
+            #ea4335 110deg,
+            #4285f4 90deg 180deg,
+            #34a853 180deg 270deg,
+            #fbbc05 270deg
+          )
+          73% 55%/150% 150% no-repeat;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+      }
     </style>
-</head>
+  </head>
 
-    <body class="form-login-body"> 
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 mx-auto login-desk">
-                       <div class="row">
-                            <div class="col-md-7 detail-box">
-                                <a href="{% url 'home' %}"><img class="logo" src="{% static 'images/HoPE.png' %}" alt=""> </a>
-                                <div class="detailsh">
-                                     <img class="help" src="{% static 'images/Hope Login (4).png' %}" alt="">
-                                    <h2><b>Welcome to HoPE</b></h2>
-                                    <p>blow off well pardon me old lurgy absolutely bladdered bodge</p>
-                                </div>
-                            </div>
-                            <div class="col-md-5 loginform">
-                                 <h4>Welcome Back</h4>                   
-                                 <p>Sign In to your Account or <a href="">Create Account</a></p>
-                                 <div class="login-det">
-                                <form method="post" enctype="multipart/form-data" action="{% url 'loginuser' %}">
-                                {% csrf_token %}
-                                    <div class="form-row">
-                                         <label for="">Email</label>
-                                             <div class="input-group mb-3">
-                                              <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1">
-                                                    <i class="far fa-user"></i>
-                                                </span>
-                                              </div>
-                                              <input type="text" name="email" class="form-control" placeholder="Enter Email" aria-label="email" aria-describedby="basic-addon1">
-                                         </div>
-                                    </div>
-                                     <div class="form-row">
-                                         <label for="">Password</label>
-                                             <div class="input-group mb-3">
-                                              <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1">
-                                                    <i class="fas fa-lock"></i>
-                                                </span>
-                                              </div>
-                                              <input type="password" name="password" class="form-control" placeholder="Enter Password" aria-label="Username" aria-describedby="basic-addon1">
-                                         </div>
-                                    </div>
-                                
-                                    
-                                    <p class="forget"><a href="">Forgot Password?</a></p>
-                                    
-                                    
-                                    <button class="btn btn-sm btn-danger" type="submit">Login</button>
-                                
-                                </form>
-                                    <!-- <p class="account"><a href="">Create Account</a></p> -->
-                                    
-                                    <div class="social-link">
-                                        <ul class="socil-icon">
-                                            <h6>Or Sign In using</h6>
-                                            <li></li><li></li><li></li>
-                                            <li>
-                                                <button type="button" data-toggle="modal" data-target="#exampleModalCenter" style="padding: 10px; border-radius: 50%; border: none;"><i class="fab fa-google fa-2x"></i></button>
-                                            </li>
-                                        
-                                            <!-- <li>
+  <body class="form-login-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto login-desk">
+          <div class="row">
+            <div class="col-md-7 detail-box">
+              <a href="{% url 'home' %}"
+                ><img
+                  class="logo"
+                  src="{% static 'images/HoPE.png' %}"
+                  alt=""
+                />
+              </a>
+              <div class="detailsh">
+                <img
+                  class="help"
+                  src="{% static 'images/Hope Login (4).png' %}"
+                  alt=""
+                />
+                <h2><b>Welcome to HoPE</b></h2>
+                <p>A helping hand toward your radiant health</p>
+              </div>
+            </div>
+            <div class="col-md-5 loginform">
+              <h4>Welcome Back</h4>
+              <p>Sign In to your Account or <a href="">Create Account</a></p>
+              <div class="login-det">
+                <form
+                  method="post"
+                  enctype="multipart/form-data"
+                  action="{% url 'loginuser' %}"
+                >
+                  {% csrf_token %}
+                  <div class="form-row">
+                    <label for="">Email</label>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                          <i class="far fa-user"></i>
+                        </span>
+                      </div>
+                      <input
+                        type="text"
+                        name="email"
+                        class="form-control"
+                        placeholder="Enter Email"
+                        aria-label="email"
+                        aria-describedby="basic-addon1"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <label for="">Password</label>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                          <i class="fas fa-lock"></i>
+                        </span>
+                      </div>
+                      <input
+                        type="password"
+                        name="password"
+                        class="form-control"
+                        placeholder="Enter Password"
+                        aria-label="Username"
+                        aria-describedby="basic-addon1"
+                      />
+                    </div>
+                  </div>
+
+                  <p class="forget"><a href="">Forgot Password?</a></p>
+
+                  <button class="btn btn-sm btn-danger" type="submit">
+                    Login
+                  </button>
+                </form>
+                <!-- <p class="account"><a href="">Create Account</a></p> -->
+
+                <div class="social-link">
+                  <ul class="socil-icon">
+                    <h6>Or Sign Up using</h6>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li>
+                      <button
+                        type="button"
+                        data-toggle="modal"
+                        data-target="#exampleModalCenter"
+                        style="padding: 10px; border-radius: 50%; border: none"
+                      >
+                        <i class="fab fa-google fa-2x"></i>
+                      </button>
+                    </li>
+
+                    <!-- <li>
                                                 <a href="#"><i class="fab fa-pinterest-p"></i></a>
                                             </li>
                                             <li>
@@ -105,53 +163,92 @@
                                             <li>
                                                 <a href="#"><i class="fab fa-behance"></i></a>
                                             </li> -->
-                                       </ul>
-                                    </div>
-                                    
-                                 </div>
-                            </div>
-                       </div>
-                      
-                    </div>
-                </div>
-            </div>
-              
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle">Sign up!</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    
-                    <div class="modal-body">
-                    <form method="post" enctype="multipart/form-data" action="{% url 'signup' %}">
-                            {% csrf_token %}
-                        <input type="text" name="name" class="form-control" placeholder="Enter Full Name" aria-label="name" aria-describedby="basic-addon1">
-                        <input type="text" name="sign-up-email" class="form-control" placeholder="Enter Email" aria-label="sign-up-email" aria-describedby="basic-addon1">
-                        <input type="password" name="sign-up-password" class="form-control" placeholder="Enter Password" aria-label="sign-up-password" aria-describedby="basic-addon1">
-                        <button class="btn btn-primary" type="submit">Sign up</button>
-                    </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                
-                  </div>
+                  </ul>
                 </div>
               </div>
-    </body>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Sign up!</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
 
-    <script src="{% static 'js2/jquery-3.2.1.min.js' %}"></script>
-    <script src="{% static 'assets/js/popper.min.js' %}"></script>
-    <script src="{% static 'js2/bootstrap.min.js' %}"></script>
-    <script src="{% static 'plugins/scroll-fixed/jquery-scrolltofixed-min.js' %}"></script>
-    <script src="{% static 'plugins/slider/js/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'js2/script.js' %}"></script>
+          <div class="modal-body">
+            <form
+              method="post"
+              enctype="multipart/form-data"
+              action="{% url 'signup' %}"
+            >
+              {% csrf_token %}
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                placeholder="Enter Full Name"
+                aria-label="name"
+                aria-describedby="basic-addon1"
+              />
+              <input
+                type="text"
+                name="sign-up-email"
+                class="form-control"
+                placeholder="Enter Email"
+                aria-label="sign-up-email"
+                aria-describedby="basic-addon1"
+              />
+              <input
+                type="password"
+                name="sign-up-password"
+                class="form-control"
+                placeholder="Enter Password"
+                aria-label="sign-up-password"
+                aria-describedby="basic-addon1"
+              />
+              <button class="btn btn-primary" type="submit">Sign up</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="{% static 'js2/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'assets/js/popper.min.js' %}"></script>
+  <script src="{% static 'js2/bootstrap.min.js' %}"></script>
+  <script src="{% static 'plugins/scroll-fixed/jquery-scrolltofixed-min.js' %}"></script>
+  <script src="{% static 'plugins/slider/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js2/script.js' %}"></script>
 </html>
 <!-- <!doctype html>
 <html lang="en">
