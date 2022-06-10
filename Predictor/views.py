@@ -236,6 +236,7 @@ def DocRecomm(request):
         specialist = temp['specialist']
         error = False
         data = []
+        urls =[]
         try:
             url = 'https://www.practo.com/'+city+'/'+specialist
             html_text = requests.get(url).text
@@ -243,9 +244,12 @@ def DocRecomm(request):
             names = soup.find_all('h2', class_='doctor-name')
             places = soup.find_all(
                 'div', class_='u-bold u-d-inlineblock u-valign--middle')
+            appt = soup.findAll('div', attrs={'class' : 'info-section'})
+            for div in appt:
+                print('https://www.practo.com/'+div.find('a')['href'])
+                urls.append('https://www.practo.com/'+div.find('a')['href'])
             for i in range(len(names)):
-                val = {'SrNo': i+1,
-                       'name': names[i].text, 'place': places[i].text}
+                val = {'SrNo': i+1,'name': names[i].text, 'place': places[i].text, 'url': urls[i]}
                 data.append(val)
         except:
             error = True
