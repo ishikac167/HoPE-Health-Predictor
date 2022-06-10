@@ -55,8 +55,13 @@
           <!-- <li><a class="dropdown" href="#services">Services</a></li> -->
           <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="{% url 'HA' %}">Heart Attack Probability</a></li>
-              <li><a href="{% url 'PCOD' %}">PCOD</a></li>
+                {% if id %}
+                <li><a href="{% url 'HA' user_id=id %}">Heart Attack Probability</a></li>
+                <li><a href="{% url 'PCOD' user_id=id %}">PCOD</a></li>
+                {% else %}
+                <li><a href="#">Heart Attack Probability</a></li>
+                <li><a href="#">PCOD</a></li>
+                {% endif %}
               <li><a href="">Myopia</a></li>
               <li><a href="">Colour Blindness</a></li>
             </ul>
@@ -177,7 +182,7 @@ By the age of 40, 40% of women with PCOD develop pre-diabetes or diabetes.<br>Ta
   <!-- <p style="color:rgb(51, 51, 83); font-weight: 700;">
     Can a passenger with your given characteristics survive?
   </p> -->
-  <form action="{% url 'result_PCOD' %}" method="POST">
+  <form action="{% url 'result_PCOD' user_id=id %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
  
     <section class="bg-12">

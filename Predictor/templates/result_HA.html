@@ -57,9 +57,12 @@
       <h1 class="logo me-auto"><a style="font-family: Poppins, sans-serif;" href="{% url 'home' %}">HoPE</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
-
-      <a href="{% url 'HA' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Back</a>
-      <a href="{% url 'home' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Home Page</a>
+      {% if id %}
+      <a href="{% url 'HA' user_id=id %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Back</a>
+      {% else %}
+      <a href="#" class="appointment-btn scrollto"><span class="d-none d-md-inline">Back</a>
+    {% endif %}
+        <a href="{% url 'home' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Home Page</a>
 
     </div>
   </header><!-- End Header -->

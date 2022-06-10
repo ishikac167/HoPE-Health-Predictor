@@ -150,16 +150,26 @@
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><a href="{% url 'HA' %}"><i class="fas fa-heartbeat"></i></a></div>
-              <h4 class="title"><a href="{% url 'HA' %}">Heart Attack</a></h4>
+              {% if id %}
+              <div class="icon"><a href="{% url 'HA' user_id=id %}"><i class="fas fa-heartbeat"></i></a></div>
+              <h4 class="title"><a href="{% url 'HA' user_id=id %}">Heart Attack</a></h4>
+              {% else %}
+              <div class="icon"><a href="#"><i class="fas fa-heartbeat"></i></a></div>
+              <h4 class="title"><a href="#">Heart Attack</a></h4>
+              {% endif %}
               <p class="description">A blockage of blood flow to the heart muscle results in a heart attack</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><a href="{% url 'PCOD' %}"><i class="fas fa-ribbon"></i></a></div>
-              <h4 class="title"><a href="{% url 'PCOD' %}">PCOD</a></h4>
+              {% if id %}
+              <div class="icon"><a href="{% url 'PCOD' user_id=id %}"><i class="fas fa-ribbon"></i></a></div>
+              <h4 class="title"><a href="{% url 'PCOD' user_id=id  %}">PCOD</a></h4>
+              {% else %}
+              <div class="icon"><a href="#"><i class="fas fa-ribbon"></i></a></div>
+              <h4 class="title"><a href="#">PCOD</a></h4>
+              {% endif %}
               <p class="description">A hormonal disorder which is largely prevalent among women of reproductive age</p>
             </div>
           </div>
@@ -284,16 +294,27 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
-              <div class="icon"><a href="{% url 'HA' %}"><i class="fas fa-heartbeat"></i></a></i></div>
-              <h4><a href="{% url 'HA' %}">Heart Attack</a></h4>
+              {% if id %}
+              <div class="icon"><a href="{% url 'HA' user_id=id %}"><i class="fas fa-heartbeat"></i></a></div>
+              <h4 class="title"><a href="{% url 'HA' user_id=id %}">Heart Attack</a></h4>
+              {% else %}
+              <div class="icon"><a href="#"><i class="fas fa-heartbeat"></i></a></div>
+              <h4 class="title"><a href="#">Heart Attack</a></h4>
+              {% endif %}
+              <h4>
               <p>The user has to answer some basic lifestyle questions a record a video of his face movements for 15 seconds.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
-              <div class="icon"><a href="{% url 'PCOD' %}"><i class="fas fa-ribbon"></i></a></div>
-              <h4><a href="{% url 'PCOD' %}">PCOD</a></h4>
+              {% if id %}
+              <div class="icon"><a href="{% url 'PCOD' user_id=id %}"><i class="fas fa-ribbon"></i></a></div>
+              <h4 class="title"><a href="{% url 'PCOD' user_id=id  %}">PCOD</a></h4>
+              {% else %}
+              <div class="icon"><a href="#"><i class="fas fa-ribbon"></i></a></div>
+              <h4 class="title"><a href="#">PCOD</a></h4>
+              {% endif %}
               <p>The user will have to answer questions primarily based on their lifestyle and food intake habits.</p>
             </div>
           </div>
