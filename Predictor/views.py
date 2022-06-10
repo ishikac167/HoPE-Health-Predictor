@@ -146,7 +146,8 @@ def result_HA(request, user_id):
 
         context = {
             'heartRate': bpm,
-            'result': res
+            'result': res,
+            'id':user_details['id']
         }
         today = date.today()
         date_str = today.strftime("%d/%m/%Y")
@@ -154,7 +155,7 @@ def result_HA(request, user_id):
         result_date = str(bpm) + ' ' + str(res) + ' ' + str(date_str)
         data['chd'] += [result_date]
         fb_client.update(user_id, data)
-    return render(request, 'result_HA.html', context, user_details)
+    return render(request, 'result_HA.html', context)
 
 
 class homepage(TemplateView):
@@ -209,7 +210,8 @@ def result_PCOD(request, user_id):
     print(res)
 
     context = {
-        'result': res
+        'result': res,
+        'id': user_details['id']
     }
 
     today = date.today()
@@ -218,7 +220,7 @@ def result_PCOD(request, user_id):
     result_date = str(res) + ' ' + str(date_str)
     data['pcod'] += [result_date]
     fb_client.update(user_id, data)
-    return render(request, 'result_PCOD.html', context, user_details)
+    return render(request, 'result_PCOD.html', context)
 
 
 def DocInput(request):
