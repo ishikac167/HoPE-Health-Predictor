@@ -59,7 +59,7 @@
     <div></div>
     <div
       class="container-fluid"
-      style="background-color: aliceblue; padding: 30px"
+      style="background-color: rgb(230, 239, 245); padding: 30px"
     >
       <div class="container" style="background-color: white">
         <div class="row" style="padding: 5px">
@@ -190,7 +190,7 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="staticBloodGrp" class="col-sm-2 col-form-label">BloodGroup</label>
+                  <label for="staticBloodGrp" class="col-sm-2 col-form-label">Blood Group</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control-plaintext" name="bloodgroup" value={{bloodgroup}}>
                   </div>
@@ -202,41 +202,82 @@
                     <div class="col-sm-1"><span onclick="newElement()" class="addBtn"><img style="size: 15px; height: 40px; width: 40px;" src="{% static 'img/plus.png' %}"></span>
                     </div>
                   </div>
+
+                  <ol id="myUL" style="font-size: large;">
+                    <!-- <li>Hit the gym</li>
+                    <li class="checked">Pay bills</li>
+                    <li>Meet George</li>
+                    <li>Buy eggs</li>
+                    <li>Read a book</li> -->
+  
+                  </ol>
                   
                 </div>
                 
-                <ol id="myUL" style="font-size: large;">
-                  <li>Hit the gym</li>
-                  <li class="checked">Pay bills</li>
-                  <li>Meet George</li>
-                  <li>Buy eggs</li>
-                  <li>Read a book</li>
 
-                </ol>
 
                 <div id="myDIV" class="header">
                   <label class="form-label" for="form3Example90">Current Medications</label>
                   <div class="row"> 
-                    <div class="col-sm-11"><input type="text" id="myInput" class="form-control form-control-md"></div>
+                    <div class="col-sm-11"><input type="text" id="myInput1" class="form-control form-control-md"></div>
                     <div class="col-sm-1"><span onclick="newMedication()" class="addBtn"><img style="size: 15px; height: 40px; width: 40px;" src="{% static 'img/plus.png' %}"></span>
                     </div>
                   </div>
                   
                 </div>
                 
-                <ol id="myUL" style="font-size: large;">
-                  <li>Hit the gym</li>
+                <ol id="myUL1" style="font-size: large;">
+                  <!-- <li>Hit the gym</li>
                   <li class="checked">Pay bills</li>
                   <li>Meet George</li>
                   <li>Buy eggs</li>
-                  <li>Read a book</li>
+                  <li>Read a book</li> -->
     
                 </ol>
     
-               <button type="submit" class="btn btn-primary">Update</button>
+               <button type="submit" style="border: none; margin-bottom: 10px;" class="appointment-btn scrollto">Update</button>
               </form>
             </div>
-            <div class="second" style="display: none;">2</div>
+            <div class="second" style="display: none;">
+              <!-- <div class="form-group row">
+                <label for="staticName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" readonly disabled class="form-control-plaintext" id="staticName" value="Hetvi Jain">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="staticDate" class="col-sm-2 col-form-label">Date of Birth</label>
+                <div class="col-sm-10">
+                  <input type="date" class="form-control-plaintext" id="staticDate" value="2022-04-03">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="staticGender" class="col-sm-2 col-form-label">Gender</label>
+                <div class="col-sm-10">
+                  <input type="text" readonly disabled class="form-control-plaintext" id="staticGender" value="Male">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="staticHeight" class="col-sm-2 col-form-label">Height</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control-plaintext" id="staticHeight" value="143cm">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="staticweight" class="col-sm-2 col-form-label">Weight</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control-plaintext" id="staticweight" value="45kg">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="staticBloodGrp" class="col-sm-2 col-form-label">Blood Group</label>
+                <div class="col-sm-10">
+                  <input type="text" readonly disabled class="form-control-plaintext" id="staticBloodGrp" value="B+">
+                </div>
+              </div> -->
+            </div>
+
+
             <div class="third" style="display: none;">3</div>
           </div>
         </div>
@@ -324,7 +365,7 @@
     // Create a "close" button and append it to each list item
     var myNodelist1 = document.getElementsByTagName("LI");
     var i;
-    for (i = 0; i < myNodelist.length; i++) {
+    for (i = 0; i < myNodelist1.length; i++) {
       var span1 = document.createElement("SPAN");
       var txt11 = document.createTextNode("         ");
       var txt1 = document.createElement("IMG");
@@ -334,7 +375,7 @@
       span1.className = "close";
       span1.appendChild(txt11);
       span1.appendChild(txt1);
-      myNodelist1[i].appendChild(span);
+      myNodelist1[i].appendChild(span1);
     }
     
     // Click on a close button to hide the current list item
@@ -358,20 +399,26 @@
     // Create a new list item when clicking on the "Add" button
     function newMedication() {
       var li1 = document.createElement("li");
-      var inputValue1 = document.getElementById("myInput").value;
-      var t1 = document.createTextNode(inputValue);
+      var inputValue1 = document.getElementById("myInput1").value;
+      var t1 = document.createTextNode(inputValue1);
       li1.appendChild(t1);
-      if (inputValue === '') {
+      if (inputValue1 === '') {
         alert("You must write something!");
       } else {
-        document.getElementById("myUL").appendChild(li1);
+        document.getElementById("myUL1").appendChild(li1);
       }
-      document.getElementById("myInput").value = "";
+      document.getElementById("myInput1").value = "";
     
       var span1 = document.createElement("SPAN");
-      var txt1 = document.createTextNode("\u00D7");
+      var txt1 = document.createElement("IMG");
+      var txt11 = document.createTextNode("         ");
+      // var txt1 = document.createTextNode("\u00D7");
+      txt1.src = "{% static 'img/minus.png' %}";
+      txt1.style.height = "18px";
+      txt1.style.width = "18px";
       span1.className = "close";
       span1.appendChild(txt1);
+      span1.appendChild(txt11);
       li1.appendChild(span1);
     
       for (i = 0; i < close1.length; i++) {

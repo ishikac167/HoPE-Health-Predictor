@@ -145,3 +145,13 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'youremail@gmail.com'
 EMAIL_HOST_PASSWORD = 'yourpassword'
 EMAIL_PORT = 587
+
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "Predictor\generated.json"
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'REST_framework.authentication.SessionAuthentication',
+        'firebase_auth.authentication.FirebaseAuthentication',
+    ),
+}

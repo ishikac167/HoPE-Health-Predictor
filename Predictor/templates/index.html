@@ -79,7 +79,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
       {% if id %}
-      <a style="color:blue" href="{% url 'dashboard' user_id=id %}"> <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></a>
+      <a style="color:#1977cc" href="{% url 'dashboard' user_id=id %}"> <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></a>
       {% else %}
       <a href="{% url 'login' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Login /</span> Signup</a>
       {% endif %}
@@ -287,7 +287,7 @@
 
         <div class="section-title">
           <h2>Services</h2>
-          <p>We aim to extract the information about preliminary symptoms and adapt an algorithm using machine learning techniques to predict certain diseases. If a disease can be predicted, then early treatment can be given to the patients which can save the life of patients. We also intend to provide doctor and nutrition recommendation to the patients for swifter treatment.
+          <p>We aim to extract the information about preliminary symptoms and adapt an algorithm using machine learning techniques to predict certain diseases. If a disease can be predicted, then early treatment can be given to the patients which can save the life of patients. We also intend to provide doctor recommendation to the patients for swifter treatment.
           </p>
         </div>
 
@@ -869,7 +869,7 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>hope@djsce.co.in</p>
+                <p>hope.djsce@gmail.com</p>
               </div>
 
               <div class="phone">
@@ -884,7 +884,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="https://formspree.io/f/xqkngbze" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -893,9 +893,9 @@
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                 </div>
               </div>
-              <div class="form-group mt-3">
+              <!-- <div class="form-group mt-3">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
+              </div> -->
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
