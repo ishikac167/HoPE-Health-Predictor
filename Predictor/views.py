@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 import pickle
+from datetime import date
 from bs4 import BeautifulSoup
 import requests
 import cv2
@@ -100,12 +101,15 @@ def predict_from_arr(arr):
 # Create your views here.
 
 
-def HA(request):
+def HA(request, user_id):
+    user_details = fb_client.get_by_id(user_id)
+    # print(user_details)
+    return render(request, 'HA.html', user_details)
 
-    return render(request, 'HA.html')
 
-
-def result_HA(request):
+def result_HA(request, user_id):
+    user_details = fb_client.get_by_id(user_id)
+    data = {}
     if request.method == 'POST':
         temp = {}
         temp['gender'] = request.POST.get('gender')
@@ -144,15 +148,22 @@ def result_HA(request):
             'heartRate': bpm,
             'result': res
         }
-    return render(request, 'result_HA.html', context)
+        today = date.today()
+        date_str = today.strftime("%d/%m/%Y")
+        data['chd'] = user_details['chd']
+        result_date = str(bpm) + ' ' + str(res) + ' ' + str(date_str)
+        data['chd'] += [result_date]
+        fb_client.update(user_id, data)
+    return render(request, 'result_HA.html', context, user_details)
 
 
 class homepage(TemplateView):
     template_name = 'index.html'
 
 
-def PCOD(request):
-    return render(request, 'PCOD.html')
+def PCOD(request, user_id):
+    user_details = fb_client.get_by_id(user_id)
+    return render(request, 'PCOD.html', user_details)
 
 
 def getPredictions(input_list):
@@ -168,7 +179,9 @@ def getPredictions(input_list):
         return 'error'
 
 
-def result_PCOD(request):
+def result_PCOD(request, user_id):
+    user_details = fb_client.get_by_id(user_id)
+    data = {}
     temp = {}
     temp['Q1'] = request.POST.get('Q1')
     temp['Q2'] = int(request.POST.get('Q2'))
@@ -199,7 +212,13 @@ def result_PCOD(request):
         'result': res
     }
 
-    return render(request, 'result_PCOD.html', context)
+    today = date.today()
+    date_str = today.strftime("%d/%m/%Y")
+    data['pcod'] = user_details['pcod']
+    result_date = str(res) + ' ' + str(date_str)
+    data['pcod'] += [result_date]
+    fb_client.update(user_id, data)
+    return render(request, 'result_PCOD.html', context, user_details)
 
 
 def DocInput(request):
