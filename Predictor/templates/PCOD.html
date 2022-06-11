@@ -70,6 +70,12 @@
       </nav><!-- .navbar -->
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>-->
+            {% if id %}
+      <a style="color:#1977cc" href="{% url 'dashboard' user_id=id %}"> <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></a>
+      <a href="{% url 'login' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Logout</span></a>
+      {% else %}
+      <a href="{% url 'login' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Login /</span> Signup</a>
+      {% endif %}
       <a href="{% url 'home' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Home Page</span></a>
     
 
