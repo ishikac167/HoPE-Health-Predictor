@@ -14,6 +14,8 @@ Keeping this in mind we have chosen the folliwng medical ailments
 3. Polycystic Ovarian Syndrome / Disease (PCOS / PCOD) 
 4. Probability of Heart Attack 
 
+Myopia & Colour Blindness App - https://github.com/ishikac167/HealthPredictor
+
 ## Team Members
 * Ishika Chokshi
 * Chirag Jagad
