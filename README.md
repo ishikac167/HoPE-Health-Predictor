@@ -1,5 +1,5 @@
 # HoPE - Health Predictor
-Innovative Product Development Project for Semesters II to VI
+Innovative Product Development Project for Semesters III to VI
 
 ## Problem Statement
 Extract the information about preliminary symptoms and adapt an algorithm using machine learning techniques to predict certain medical ailments. If an ailment can be predicted, then early treatment can be given to the patients which can save the life of patients. We also intend to provide doctor and blog recommendation to the patients for swifter treatment.
